@@ -40,3 +40,16 @@ C:\Users\Christa\Documents\GitHub\ApplesToApples\Apples To Apples\Apples To Appl
 C:\Users\Camille\Desktop\Apples To Apples\Apples To Apples\bin\Debug\Apples To Apples.exe.config
 C:\Users\Camille\Desktop\Apples To Apples\Apples To Apples\obj\Debug\Apples To Apples.exe
 C:\Users\Camille\Desktop\Apples To Apples\Apples To Apples\obj\Debug\Apples To Apples.pdb
+C:\Users\Christa\Documents\GitHub\ATA\Apples To Apples\Apples To Apples\bin\Debug\Apples To Apples.exe.config
+C:\Users\Christa\Documents\GitHub\ATA\Apples To Apples\Apples To Apples\obj\Debug\Apples To Apples.exe
+C:\Users\Christa\Documents\GitHub\ATA\Apples To Apples\Apples To Apples\obj\Debug\Apples To Apples.pdb
+C:\Users\Christa\Documents\GitHub\ATA\Apples To Apples\Apples To Apples\bin\Debug\Apples To Apples.exe
+C:\Users\Christa\Documents\GitHub\ATA\Apples To Apples\Apples To Apples\bin\Debug\Apples To Apples.pdb
+C:\Users\Christa\Documents\GitHub\ATA\Apples To Apples\Apples To Apples\obj\Debug\Apples To Apples.csprojResolveAssemblyReference.cache
+C:\Users\Christa\Documents\GitHub\ATA\Apples To Apples\Apples To Apples\obj\Debug\MainWindow.baml
+C:\Users\Christa\Documents\GitHub\ATA\Apples To Apples\Apples To Apples\obj\Debug\MainWindow.g.cs
+C:\Users\Christa\Documents\GitHub\ATA\Apples To Apples\Apples To Apples\obj\Debug\App.g.cs
+C:\Users\Christa\Documents\GitHub\ATA\Apples To Apples\Apples To Apples\obj\Debug\Apples To Apples_MarkupCompile.cache
+C:\Users\Christa\Documents\GitHub\ATA\Apples To Apples\Apples To Apples\obj\Debug\Apples To Apples.g.resources
+C:\Users\Christa\Documents\GitHub\ATA\Apples To Apples\Apples To Apples\obj\Debug\Apples_To_Apples.Properties.Resources.resources
+C:\Users\Christa\Documents\GitHub\ATA\Apples To Apples\Apples To Apples\obj\Debug\Apples To Apples.csproj.GenerateResource.Cache
