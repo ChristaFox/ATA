@@ -1,0 +1,42 @@
+c:\users\camille\documents\visual studio 2013\Projects\Apples To Apples\Apples To Apples\bin\Debug\Apples To Apples.exe.config
+c:\users\camille\documents\visual studio 2013\Projects\Apples To Apples\Apples To Apples\bin\Debug\Apples To Apples.exe
+c:\users\camille\documents\visual studio 2013\Projects\Apples To Apples\Apples To Apples\bin\Debug\Apples To Apples.pdb
+c:\users\camille\documents\visual studio 2013\Projects\Apples To Apples\Apples To Apples\obj\Debug\Apples To Apples.csprojResolveAssemblyReference.cache
+c:\users\camille\documents\visual studio 2013\Projects\Apples To Apples\Apples To Apples\obj\Debug\MainWindow.baml
+c:\users\camille\documents\visual studio 2013\Projects\Apples To Apples\Apples To Apples\obj\Debug\MainWindow.g.cs
+c:\users\camille\documents\visual studio 2013\Projects\Apples To Apples\Apples To Apples\obj\Debug\App.g.cs
+c:\users\camille\documents\visual studio 2013\Projects\Apples To Apples\Apples To Apples\obj\Debug\Apples To Apples_MarkupCompile.cache
+c:\users\camille\documents\visual studio 2013\Projects\Apples To Apples\Apples To Apples\obj\Debug\Apples To Apples.g.resources
+c:\users\camille\documents\visual studio 2013\Projects\Apples To Apples\Apples To Apples\obj\Debug\Apples_To_Apples.Properties.Resources.resources
+c:\users\camille\documents\visual studio 2013\Projects\Apples To Apples\Apples To Apples\obj\Debug\Apples To Apples.csproj.GenerateResource.Cache
+c:\users\camille\documents\visual studio 2013\Projects\Apples To Apples\Apples To Apples\obj\Debug\Apples To Apples.exe
+c:\users\camille\documents\visual studio 2013\Projects\Apples To Apples\Apples To Apples\obj\Debug\Apples To Apples.pdb
+C:\Users\Camille\Documents\GitHub\ApplesToApples\Apples To Apples\Apples To Apples\bin\Debug\Apples To Apples.exe.config
+C:\Users\Camille\Documents\GitHub\ApplesToApples\Apples To Apples\Apples To Apples\obj\Debug\Apples To Apples.exe
+C:\Users\Camille\Documents\GitHub\ApplesToApples\Apples To Apples\Apples To Apples\obj\Debug\Apples To Apples.pdb
+C:\Users\Camille\Documents\GitHub\ApplesToApples\Apples To Apples\Apples To Apples\bin\Debug\Apples To Apples.exe
+C:\Users\Camille\Documents\GitHub\ApplesToApples\Apples To Apples\Apples To Apples\bin\Debug\Apples To Apples.pdb
+C:\Users\Camille\Documents\GitHub\ApplesToApples\Apples To Apples\Apples To Apples\obj\Debug\Apples To Apples.csprojResolveAssemblyReference.cache
+C:\Users\Camille\Documents\GitHub\ApplesToApples\Apples To Apples\Apples To Apples\obj\Debug\MainWindow.baml
+C:\Users\Camille\Documents\GitHub\ApplesToApples\Apples To Apples\Apples To Apples\obj\Debug\MainWindow.g.cs
+C:\Users\Camille\Documents\GitHub\ApplesToApples\Apples To Apples\Apples To Apples\obj\Debug\App.g.cs
+C:\Users\Camille\Documents\GitHub\ApplesToApples\Apples To Apples\Apples To Apples\obj\Debug\Apples To Apples_MarkupCompile.cache
+C:\Users\Camille\Documents\GitHub\ApplesToApples\Apples To Apples\Apples To Apples\obj\Debug\Apples To Apples.g.resources
+C:\Users\Camille\Documents\GitHub\ApplesToApples\Apples To Apples\Apples To Apples\obj\Debug\Apples_To_Apples.Properties.Resources.resources
+C:\Users\Camille\Documents\GitHub\ApplesToApples\Apples To Apples\Apples To Apples\obj\Debug\Apples To Apples.csproj.GenerateResource.Cache
+C:\Users\Christa\Documents\GitHub\ApplesToApples\Apples To Apples\Apples To Apples\bin\Debug\Apples To Apples.exe.config
+C:\Users\Christa\Documents\GitHub\ApplesToApples\Apples To Apples\Apples To Apples\obj\Debug\Apples To Apples.exe
+C:\Users\Christa\Documents\GitHub\ApplesToApples\Apples To Apples\Apples To Apples\obj\Debug\Apples To Apples.pdb
+C:\Users\Christa\Documents\GitHub\ApplesToApples\Apples To Apples\Apples To Apples\bin\Debug\Apples To Apples.exe
+C:\Users\Christa\Documents\GitHub\ApplesToApples\Apples To Apples\Apples To Apples\bin\Debug\Apples To Apples.pdb
+C:\Users\Christa\Documents\GitHub\ApplesToApples\Apples To Apples\Apples To Apples\obj\Debug\Apples To Apples.csprojResolveAssemblyReference.cache
+C:\Users\Christa\Documents\GitHub\ApplesToApples\Apples To Apples\Apples To Apples\obj\Debug\MainWindow.baml
+C:\Users\Christa\Documents\GitHub\ApplesToApples\Apples To Apples\Apples To Apples\obj\Debug\MainWindow.g.cs
+C:\Users\Christa\Documents\GitHub\ApplesToApples\Apples To Apples\Apples To Apples\obj\Debug\App.g.cs
+C:\Users\Christa\Documents\GitHub\ApplesToApples\Apples To Apples\Apples To Apples\obj\Debug\Apples To Apples_MarkupCompile.cache
+C:\Users\Christa\Documents\GitHub\ApplesToApples\Apples To Apples\Apples To Apples\obj\Debug\Apples To Apples.g.resources
+C:\Users\Christa\Documents\GitHub\ApplesToApples\Apples To Apples\Apples To Apples\obj\Debug\Apples_To_Apples.Properties.Resources.resources
+C:\Users\Christa\Documents\GitHub\ApplesToApples\Apples To Apples\Apples To Apples\obj\Debug\Apples To Apples.csproj.GenerateResource.Cache
+C:\Users\Camille\Desktop\Apples To Apples\Apples To Apples\bin\Debug\Apples To Apples.exe.config
+C:\Users\Camille\Desktop\Apples To Apples\Apples To Apples\obj\Debug\Apples To Apples.exe
+C:\Users\Camille\Desktop\Apples To Apples\Apples To Apples\obj\Debug\Apples To Apples.pdb

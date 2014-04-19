@@ -1,0 +1,95 @@
+﻿<Window x:Class="Apples_To_Apples.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Background="Black"
+        Title="Apples to Apples" Height="600" Width="900">
+
+    <Window.Resources>
+        <Style x:Key="TitleStyle" TargetType="Label" >
+            <Setter Property="FontSize" Value="100" />
+            <Setter Property="Padding" Value="10" />
+            <Setter Property="Background" Value="White" />
+            <Setter Property="Foreground" Value="Red" />
+            <Setter Property="HorizontalContentAlignment" Value="Center" />
+        </Style>
+        <Style x:Key="CanvasStyle" TargetType="Canvas">
+            <Setter Property="Background" Value="Black" />
+            <Setter Property="Margin" Value="0,1,0,0" />
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="Padding" Value="10, 3" />
+        </Style>
+    </Window.Resources>
+
+    <DockPanel>
+        <Label DockPanel.Dock="Top" Name="LblTitle" Content="Apples to Apples" 
+               Style="{StaticResource TitleStyle}" />
+        <Label DockPanel.Dock ="Bottom" Name="Copyright" 
+                   Content="Camille and Christa ©" FontSize="10" 
+                   Canvas.Left="0" Canvas.Bottom="0" Foreground="White"/>
+        <Canvas Name="StartPage" Style="{StaticResource CanvasStyle}" >
+            <Label Name="LblDescription" Content="A game of hilarious comparisons!"
+                   FontSize="70" Foreground="GreenYellow" FontFamily="MoolBoran" Width="892" HorizontalContentAlignment="Center"/>
+            <Label Name="LblStart" Content="You are player: "
+                   HorizontalContentAlignment="Center" Canvas.Bottom="28" FontSize="36" Foreground="White" Canvas.Left="289" Canvas.Top="121"/>
+            <Label Name="LblPlayerNum_1" Content="0"
+                   HorizontalContentAlignment="Center" Canvas.Bottom="28" FontSize="36" Foreground="White" Canvas.Left="549" Canvas.Top="121"/>
+            <Label Name="LblWaitForPlyrs" Content="You can continue to wait for players or start the game."
+                   HorizontalContentAlignment="Center" Canvas.Bottom="28" FontSize="36" Foreground="White" Canvas.Left="10" Canvas.Top="313"/>
+            <Button Name="BtnStart" Canvas.Left="389" Canvas.Top="270" Width="92" FontSize="20" 
+                    Content="Start" Height="38" Click="ButtonStart_Click" />
+        </Canvas>
+        <Canvas Name="PlayerView" Visibility="Collapsed">
+            <Button Name="BtnDropOut" Content="Drop Out" Width="99" Canvas.Left="783" Canvas.Top="524" Height="36" 
+                    FontSize="15" Click="BtnDropOut_Click"/>
+            <Label Name="LblStatus" Content="Status Bar" Canvas.Left="681" Canvas.Top="10" Height="45" Width="117" 
+                   FontSize="20" Foreground="White"/>
+            <TextBox Name="TxtBoxStatusBar" Text="Status of game here." Canvas.Left="652" Canvas.Top="55" Width="159" 
+                     Height="68" />
+            <Label Name="LblPlayer" Content="Player" Foreground="White" Canvas.Left="31" Canvas.Top="29" FontSize="25"/>
+            <Label Name="LblPlyrNum_2" Content="0" Foreground="White" Height="37" Width="37" Canvas.Left="108" 
+                   Canvas.Top="29" FontSize="25"/>
+            <Label Name="LblAwesomePts" Content="Awesome Points" Foreground="White" Canvas.Left="77" Canvas.Top="110"
+                   FontSize="21"/>
+            <TextBox Name="TxtBoxAwesomePts" Text="0" Canvas.Left="133" Canvas.Top="153" Height="40" Width="43" 
+                     HorizontalContentAlignment="Center" FontSize="20" HorizontalAlignment="Center"/>
+        </Canvas>
+        <Canvas Name="JudgeView" Visibility="Collapsed">
+            <Button Name="BtnEndGame_J" Content="End Game" Width="99" Canvas.Left="783" Canvas.Top="524" Height="36" 
+                    FontSize="15" Click="BtnEnd_Click"/>
+            <Label Name="LblStatus_J" Content="Status Bar" Canvas.Left="681" Canvas.Top="10" Height="45" Width="117" 
+                   FontSize="20" Foreground="White"/>
+            <TextBox Name="TxtBoxStatusBar_J" Text="Status of game here." Canvas.Left="652" Canvas.Top="55" Width="159" 
+                     Height="68" />
+            <Label Name="LblPlayer_J" Content="Player" Foreground="White" Canvas.Left="31" Canvas.Top="29" FontSize="25"/>
+            <Label Name="LblPlyrNum_2_J" Content="0" Foreground="White" Height="37" Width="37" Canvas.Left="108" 
+                   Canvas.Top="29" FontSize="25"/>
+            <Label Name="LblAwesomePts_J" Content="Awesome Points" Foreground="White" Canvas.Left="77" Canvas.Top="110"
+                   FontSize="21"/>
+            <TextBox Name="TxtBoxAwesomePts_J" Text="0" Canvas.Left="133" Canvas.Top="153" Height="40" Width="43" 
+                     HorizontalContentAlignment="Center" FontSize="20" HorizontalAlignment="Center"/>
+            <Label Name="LblJudge" Content="You are the judge this round!" Foreground="DarkOrchid" Canvas.Left="178" 
+                   Canvas.Top="34" FontSize="20"/>
+        </Canvas>
+        <Canvas Name="ResultsPage" Visibility="Collapsed">
+            <Label Name="LblGameOver" Content="Game Over" Foreground="Orange" Height="61" Width="892" 
+                   HorizontalContentAlignment="Center" FontSize="40"/>
+            <Label Name="LblResults" Content="Results" Canvas.Top="61" Height="73" Width="367" 
+                   FontSize="40" Foreground="White" HorizontalContentAlignment="Center"/>
+            <Label Name="LblPlayerResult" Content="Player                                                           Awesome Points"
+                   Foreground="Yellow" Canvas.Left="86" Canvas.Top="150" Width="749" FontSize="25"/>
+            <Label Name="LblCongrats" Content="Contratulations, Player      ! You won!" Foreground="LightBlue" 
+                   Canvas.Top="509" Width="892" FontSize="20" HorizontalContentAlignment="Center"/>
+            <TextBox Name="TxtBoxPlyrNum_1" Text="0" Canvas.Left="177" Canvas.Top="160" Height="28" Width="24" 
+                     FontSize="15" HorizontalContentAlignment="Center"/>
+            <TextBox Name="TxtBoxAwePts" Text="0" HorizontalContentAlignment="Center" Canvas.Left="523" 
+                     Canvas.Top="160" Height="28" Width="25" FontSize="15"/>
+            <TextBox Name="TxtBoxPlyrNum_2" Text="0" HorizontalContentAlignment="Center" Canvas.Left="492" 
+                     Canvas.Top="520" Width="22"/>
+        </Canvas>
+        <Canvas Name="DropOutPage" Visibility="Collapsed">
+            
+        </Canvas>
+    </DockPanel>
+
+</Window>
