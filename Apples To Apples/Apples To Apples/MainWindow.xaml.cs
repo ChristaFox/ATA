@@ -25,15 +25,15 @@ namespace Apples_To_Apples
         public MainWindow()
         {
             InitializeComponent();
-            newGame = new ApplesToApples(StartPage);
-            newGame.StartGame();
-        }
+            newGame = new ApplesToApples();
 
-        
+            LblPlayerNum_1.Content = newGame.newPlayer.playerNum;
+            
+        }
 
         public Boolean IsJudge()
         {
-            return true;
+            return newGame.newPlayer.isJudge;
         }
 
         private void ButtonStart_Click(object sender, RoutedEventArgs e)
@@ -41,9 +41,15 @@ namespace Apples_To_Apples
             StartPage.Visibility = System.Windows.Visibility.Collapsed;
             LblTitle.Visibility = System.Windows.Visibility.Collapsed;
             if (IsJudge())
+            {
                 JudgeView.Visibility = System.Windows.Visibility.Visible;
+            }
             else
-                PlayerView.Visibility = System.Windows.Visibility.Visible; 
+            {
+                PlayerView.Visibility = System.Windows.Visibility.Visible;
+                TxtBoxStatusBar.Text = newGame.STATUS_WAITING_FOR_JUDGE_TO_DRAW;
+                newGame.StartGame(PlayerView);
+            }
         }
 
         private void BtnEnd_Click(object sender, RoutedEventArgs e)

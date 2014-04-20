@@ -12,15 +12,30 @@ namespace Apples_To_Apples
 {
     class ApplesToApples
     {
-        public ApplesToApples(Canvas canvas)
+        public Player newPlayer;
+        public int numOfPlayers = 1;
+
+        public String STATUS_WAITING_FOR_JUDGE_TO_DRAW = "Waiting for judge to draw...";
+        public String STATUS_WAITING_FOR_PLAYERS_TO_CHOOSE = "Waiting for players to choose...";
+
+        public ApplesToApples()
         {
-            Player newPlayer = new Player();
-            //canvas.LblPlayerNum_1.Content = newPlayer.playerNum;
+            newPlayer = new Player(1);
+            //MainWindow.StartPage.LblPlayerNum_1.Content = newPlayer.playerNum;
         }
 
-        public void StartGame()
+        public void StartGame(Canvas view)
         {
+            if(!newPlayer.isJudge)
+            {
 
+                int lefty = 15;
+                for (int i = 0; i < 5; i++)
+                {
+                    DrawCard(lefty, 300, "Test", Brushes.Red, view);
+                    lefty += 165;
+                }
+            }
         }
 
         public void DrawCard(int left, int top, String message, SolidColorBrush color, Canvas canvas)
