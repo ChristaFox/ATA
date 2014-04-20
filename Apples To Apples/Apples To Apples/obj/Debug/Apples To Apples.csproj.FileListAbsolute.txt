@@ -66,3 +66,7 @@ C:\Users\Camille\Documents\GitHub\ATA\Apples To Apples\Apples To Apples\obj\Debu
 C:\Users\Camille\Documents\GitHub\ATA\Apples To Apples\Apples To Apples\obj\Debug\Apples To Apples.g.resources
 C:\Users\Camille\Documents\GitHub\ATA\Apples To Apples\Apples To Apples\obj\Debug\Apples_To_Apples.Properties.Resources.resources
 C:\Users\Camille\Documents\GitHub\ATA\Apples To Apples\Apples To Apples\obj\Debug\Apples To Apples.csproj.GenerateResource.Cache
+C:\Users\Camille\Documents\GitHub\ATA\Apples To Apples\Apples To Apples\bin\Debug\EntityFramework.dll
+C:\Users\Camille\Documents\GitHub\ATA\Apples To Apples\Apples To Apples\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Camille\Documents\GitHub\ATA\Apples To Apples\Apples To Apples\bin\Debug\EntityFramework.xml
+C:\Users\Camille\Documents\GitHub\ATA\Apples To Apples\Apples To Apples\bin\Debug\EntityFramework.SqlServer.xml
