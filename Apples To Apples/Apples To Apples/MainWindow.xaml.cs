@@ -20,33 +20,20 @@ namespace Apples_To_Apples
     /// </summary>
     public partial class MainWindow : Window
     {
+        ApplesToApples newGame; 
+
         public MainWindow()
         {
             InitializeComponent();
-        }
+            newGame = new ApplesToApples();
 
-        public Rectangle DrawCard(int left, int top, String message, SolidColorBrush color, Canvas canvas)
-        {
-            Rectangle rect = new Rectangle();
-            rect.Width = 150;
-            rect.Height = 200;
-            rect.Fill = color;
-
-            Label cardLbl = new Label();
-            cardLbl.Content = message;
-
-            canvas.Children.Add(rect);
-            canvas.Children.Add(cardLbl);
-            Canvas.SetLeft(rect, left);
-            Canvas.SetLeft(cardLbl, left);
-            Canvas.SetTop(rect, top);
-            Canvas.SetTop(cardLbl, top);
-            return rect;
+            LblPlayerNum_1.Content = newGame.newPlayer.playerNum;
+            
         }
 
         public Boolean IsJudge()
         {
-            return false;
+            return newGame.newPlayer.isJudge;
         }
 
         private void ButtonStart_Click(object sender, RoutedEventArgs e)
@@ -54,9 +41,15 @@ namespace Apples_To_Apples
             StartPage.Visibility = System.Windows.Visibility.Collapsed;
             LblTitle.Visibility = System.Windows.Visibility.Collapsed;
             if (IsJudge())
+            {
                 JudgeView.Visibility = System.Windows.Visibility.Visible;
+            }
             else
-                PlayerView.Visibility = System.Windows.Visibility.Visible; 
+            {
+                PlayerView.Visibility = System.Windows.Visibility.Visible;
+                TxtBoxStatusBar.Text = newGame.STATUS_WAITING_FOR_JUDGE_TO_DRAW;
+                newGame.StartGame(PlayerView);
+            }
         }
 
         private void BtnEnd_Click(object sender, RoutedEventArgs e)
@@ -69,6 +62,12 @@ namespace Apples_To_Apples
         {
             PlayerView.Visibility = System.Windows.Visibility.Collapsed;
             DropOutPage.Visibility = System.Windows.Visibility.Visible;
+        }
+
+        private void BtnDrawCard_Click(object sender, RoutedEventArgs e)
+        {
+            BtnDrawCard.IsEnabled = false;
+            newGame.DrawCard(270, 120, "Test", Brushes.GreenYellow, JudgeView);
         }
     }
 }

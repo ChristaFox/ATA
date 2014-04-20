@@ -25,7 +25,7 @@
         <Label DockPanel.Dock="Top" Name="LblTitle" Content="Apples to Apples" 
                Style="{StaticResource TitleStyle}" />
         <Label DockPanel.Dock ="Bottom" Name="Copyright" 
-                   Content="Camille and Christa ©" FontSize="10" 
+                   Content="© Camille and Christa" FontSize="10" 
                    Canvas.Left="0" Canvas.Bottom="0" Foreground="White"/>
         <Canvas Name="StartPage" Style="{StaticResource CanvasStyle}" >
             <Label Name="LblDescription" Content="A game of hilarious comparisons!"
@@ -70,6 +70,8 @@
                      HorizontalContentAlignment="Center" FontSize="20" HorizontalAlignment="Center"/>
             <Label Name="LblJudge" Content="You are the judge this round!" Foreground="DarkOrchid" Canvas.Left="178" 
                    Canvas.Top="34" FontSize="20"/>
+            <Button Name="BtnDrawCard" Content="Draw" Canvas.Left="698" Canvas.Top="179" Height="200" Width="150" 
+                    FontSize="21" Click="BtnDrawCard_Click" Background="GreenYellow"/>
         </Canvas>
         <Canvas Name="ResultsPage" Visibility="Collapsed">
             <Label Name="LblGameOver" Content="Game Over" Foreground="Orange" Height="61" Width="892" 
