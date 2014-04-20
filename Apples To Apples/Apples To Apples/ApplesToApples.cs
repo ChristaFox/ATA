@@ -23,23 +23,28 @@ namespace Apples_To_Apples
 
         }
 
-        public Rectangle DrawCard(int left, int top, String message, SolidColorBrush color, Canvas canvas)
+        public void DrawCard(int left, int top, String message, SolidColorBrush color, Canvas canvas)
         {
-            Rectangle rect = new Rectangle();
-            rect.Width = 150;
-            rect.Height = 200;
-            rect.Fill = color;
+            DrawRectangle(150, 200, left, top, Brushes.White, canvas);
+            DrawRectangle(130, 180, left + 10, top + 10, color, canvas);
 
             Label cardLbl = new Label();
             cardLbl.Content = message;
 
-            canvas.Children.Add(rect);
             canvas.Children.Add(cardLbl);
+            Canvas.SetLeft(cardLbl, left + 10);
+            Canvas.SetTop(cardLbl, top + 10);
+        }
+
+        public void DrawRectangle(int width, int height, int left, int top, SolidColorBrush color, Canvas canvas)
+        {
+            Rectangle rect = new Rectangle();
+            rect.Width = width;
+            rect.Height = height;
+            rect.Fill = color;
+            canvas.Children.Add(rect);
             Canvas.SetLeft(rect, left);
-            Canvas.SetLeft(cardLbl, left);
             Canvas.SetTop(rect, top);
-            Canvas.SetTop(cardLbl, top);
-            return rect;
         }
     }
 }

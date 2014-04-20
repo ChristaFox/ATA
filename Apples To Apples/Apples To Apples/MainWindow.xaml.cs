@@ -61,7 +61,7 @@ namespace Apples_To_Apples
         private void BtnDrawCard_Click(object sender, RoutedEventArgs e)
         {
             BtnDrawCard.IsEnabled = false;
-            newGame.DrawCard(200, 200, "Test", Brushes.GreenYellow, JudgeView);
+            newGame.DrawCard(270, 120, "Test", Brushes.GreenYellow, JudgeView);
         }
     }
 }
