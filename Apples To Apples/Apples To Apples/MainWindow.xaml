@@ -25,7 +25,7 @@
         <Label DockPanel.Dock="Top" Name="LblTitle" Content="Apples to Apples" 
                Style="{StaticResource TitleStyle}" />
         <Label DockPanel.Dock ="Bottom" Name="Copyright" 
-                   Content="Camille and Christa ©" FontSize="10" 
+                   Content="© Camille and Christa" FontSize="10" 
                    Canvas.Left="0" Canvas.Bottom="0" Foreground="White"/>
         <Canvas Name="StartPage" Style="{StaticResource CanvasStyle}" >
             <Label Name="LblDescription" Content="A game of hilarious comparisons!"

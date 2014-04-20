@@ -25,7 +25,7 @@ namespace Apples_To_Apples
         public MainWindow()
         {
             InitializeComponent();
-            newGame = new ApplesToApples();
+            newGame = new ApplesToApples(StartPage);
             newGame.StartGame();
         }
 

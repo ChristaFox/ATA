@@ -12,10 +12,10 @@ namespace Apples_To_Apples
 {
     class ApplesToApples
     {
-        public ApplesToApples()
+        public ApplesToApples(Canvas canvas)
         {
             Player newPlayer = new Player();
-            //LblPlayerNum_1.Content = newPlayer.playerNum;
+            //canvas.LblPlayerNum_1.Content = newPlayer.playerNum;
         }
 
         public void StartGame()
