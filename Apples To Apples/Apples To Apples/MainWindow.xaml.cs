@@ -23,6 +23,8 @@ namespace Apples_To_Apples
         public MainWindow()
         {
             InitializeComponent();
+            ApplesToApples newGame = new ApplesToApples();
+            newGame.StartGame();
         }
 
         public Rectangle DrawCard(int left, int top, String message, SolidColorBrush color, Canvas canvas)

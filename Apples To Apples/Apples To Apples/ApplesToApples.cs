@@ -8,6 +8,15 @@ namespace Apples_To_Apples
 {
     class ApplesToApples
     {
+        public ApplesToApples()
+        {
+            Player newPlayer = new Player();
+            //MainWindow.LblPlayerNum_1.Content = newPlayer.playerNum;
+        }
 
+        public void StartGame()
+        {
+
+        }
     }
 }
