@@ -20,35 +20,20 @@ namespace Apples_To_Apples
     /// </summary>
     public partial class MainWindow : Window
     {
+        ApplesToApples newGame; 
+
         public MainWindow()
         {
             InitializeComponent();
-            ApplesToApples newGame = new ApplesToApples();
+            newGame = new ApplesToApples();
             newGame.StartGame();
         }
 
-        public Rectangle DrawCard(int left, int top, String message, SolidColorBrush color, Canvas canvas)
-        {
-            Rectangle rect = new Rectangle();
-            rect.Width = 150;
-            rect.Height = 200;
-            rect.Fill = color;
-
-            Label cardLbl = new Label();
-            cardLbl.Content = message;
-
-            canvas.Children.Add(rect);
-            canvas.Children.Add(cardLbl);
-            Canvas.SetLeft(rect, left);
-            Canvas.SetLeft(cardLbl, left);
-            Canvas.SetTop(rect, top);
-            Canvas.SetTop(cardLbl, top);
-            return rect;
-        }
+        
 
         public Boolean IsJudge()
         {
-            return false;
+            return true;
         }
 
         private void ButtonStart_Click(object sender, RoutedEventArgs e)
@@ -71,6 +56,12 @@ namespace Apples_To_Apples
         {
             PlayerView.Visibility = System.Windows.Visibility.Collapsed;
             DropOutPage.Visibility = System.Windows.Visibility.Visible;
+        }
+
+        private void BtnDrawCard_Click(object sender, RoutedEventArgs e)
+        {
+            BtnDrawCard.IsEnabled = false;
+            newGame.DrawCard(200, 200, "Test", Brushes.GreenYellow, JudgeView);
         }
     }
 }
