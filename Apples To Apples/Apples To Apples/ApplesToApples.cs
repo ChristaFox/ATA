@@ -47,7 +47,7 @@ namespace Apples_To_Apples
                 {
                     var departmentQuery = from d in applesContext.RedDeckOfCards
                         select d.noun[j];
-                    cardInfo = departmentQuery.ToString();
+                    //cardInfo = departmentQuery.ToString();
                 }
 
                 
