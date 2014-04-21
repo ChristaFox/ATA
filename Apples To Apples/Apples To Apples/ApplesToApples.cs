@@ -37,7 +37,7 @@ namespace Apples_To_Apples
 
         public void DealCards(Canvas view)
         {
-            int lefty = 27;
+            int lefty = 26;
             for (int i = 0; i < 5; i++)
             {
                 Random rand = new Random();
@@ -53,8 +53,8 @@ namespace Apples_To_Apples
                 
 
 
-                DrawCard(lefty, 300, cardInfo.ToString(), Brushes.Red, view);
-                lefty += 165;
+                DrawCard(lefty, 315, cardInfo.ToString(), Brushes.Red, view);
+                lefty += 170;
             }
         }
 
