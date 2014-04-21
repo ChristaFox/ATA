@@ -46,12 +46,9 @@ namespace Apples_To_Apples
                 using (applesContext = new ApplesToApplesDBEntities())
                 {
                     var departmentQuery = from d in applesContext.RedDeckOfCards
-                        select d.noun[j];
-                    //cardInfo = departmentQuery.ToString();
+                        orderby d.noun select d.noun[j];
+                    //cardInfo = departmentQuery;
                 }
-
-                
-
 
                 DrawCard(lefty, 315, cardInfo.ToString(), Brushes.Red, view);
                 lefty += 170;
