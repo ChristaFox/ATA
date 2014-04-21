@@ -16,6 +16,8 @@ namespace Apples_To_Apples
         public Player newPlayer;
         public int numOfPlayers = 1;
 
+        ApplesToApplesDBEntities applesContext;
+
         public String STATUS_WAITING_FOR_JUDGE_TO_DRAW = "Waiting for judge to draw...";
         public String STATUS_WAITING_FOR_PLAYERS_TO_CHOOSE = "Waiting for players to choose...";
 
@@ -35,37 +37,24 @@ namespace Apples_To_Apples
 
         public void DealCards(Canvas view)
         {
-<<<<<<< HEAD
             int lefty = 27;
             for (int i = 0; i < 5; i++)
             {
-                DrawCard(lefty, 310, "Test", Brushes.Red, view);
-                lefty += 170;
-=======
-            ApplesToApplesDBEntities applesContext;
-            int lefty = 15;
-            for (int i = 0; i < 5; i++)
-            {
-                //SqlConnection connect = new SqlConnection();
-                //SqlCommand sqlCmd = new SqlCommand();
-                //sqlCmd.CommandType = System.Data.CommandType.Text;
-                //sqlCmd.CommandText = "";
-                //sqlCmd.Connection = connect;
-                //connect.Open();
-                //ParamArrayAttribute = sqlCmd.Parameters.Add(new _SqlParameter(SqlDbType.Int32))
                 Random rand = new Random();
-                Int32 j = rand.Next(0, 20);
-                //string cardInfo = sqlCmd[j];
-                //using (applesContext = new ApplesToApplesDBEntities)
-                //{
-                //    var departmentQuery = from d in applesContext.GreenDeckOfCards
-                        
-                //}
-                var cardInfo = applesContext.RedDeckOfCards.ElementAt(j);
+                Int32 j = rand.Next(0, 27);
+                string cardInfo = "null";
+                using (applesContext = new ApplesToApplesDBEntities())
+                {
+                    var departmentQuery = from d in applesContext.RedDeckOfCards
+                        select d.noun[j];
+                    //cardInfo = departmentQuery.ToString();
+                }
+
+                
+
 
                 DrawCard(lefty, 300, cardInfo.ToString(), Brushes.Red, view);
                 lefty += 165;
->>>>>>> 119b1ec22708023419fc097e6c864a8b910d3ba0
             }
         }
 
