@@ -70,3 +70,7 @@ C:\Users\Camille\Documents\GitHub\ATA\Apples To Apples\Apples To Apples\bin\Debu
 C:\Users\Camille\Documents\GitHub\ATA\Apples To Apples\Apples To Apples\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\Camille\Documents\GitHub\ATA\Apples To Apples\Apples To Apples\bin\Debug\EntityFramework.xml
 C:\Users\Camille\Documents\GitHub\ATA\Apples To Apples\Apples To Apples\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Christa\Documents\GitHub\ATA\Apples To Apples\Apples To Apples\bin\Debug\EntityFramework.dll
+C:\Users\Christa\Documents\GitHub\ATA\Apples To Apples\Apples To Apples\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Christa\Documents\GitHub\ATA\Apples To Apples\Apples To Apples\bin\Debug\EntityFramework.xml
+C:\Users\Christa\Documents\GitHub\ATA\Apples To Apples\Apples To Apples\bin\Debug\EntityFramework.SqlServer.xml
