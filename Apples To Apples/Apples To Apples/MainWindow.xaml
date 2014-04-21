@@ -29,19 +29,23 @@
                    Canvas.Left="0" Canvas.Bottom="0" Foreground="White"/>
         <Canvas Name="StartPage" Style="{StaticResource CanvasStyle}" >
             <Label Name="LblDescription" Content="A game of hilarious comparisons!"
-                   FontSize="70" Foreground="GreenYellow" FontFamily="MoolBoran" Width="892" HorizontalContentAlignment="Center"/>
+                   FontSize="70" Foreground="GreenYellow" FontFamily="MoolBoran" Width="892" 
+                   HorizontalContentAlignment="Center"/>
             <Label Name="LblStart" Content="You are player: "
-                   HorizontalContentAlignment="Center" Canvas.Bottom="28" FontSize="36" Foreground="White" Canvas.Left="289" Canvas.Top="121"/>
+                   HorizontalContentAlignment="Center" Canvas.Bottom="28" FontSize="36" Foreground="White"
+                   Canvas.Left="289" Canvas.Top="121"/>
             <Label Name="LblPlayerNum_1" Content="0"
-                   HorizontalContentAlignment="Center" Canvas.Bottom="28" FontSize="36" Foreground="White" Canvas.Left="549" Canvas.Top="121"/>
+                   HorizontalContentAlignment="Center" Canvas.Bottom="28" FontSize="36" Foreground="White"
+                   Canvas.Left="549" Canvas.Top="121"/>
             <Label Name="LblWaitForPlyrs" Content="You can continue to wait for players or start the game."
-                   HorizontalContentAlignment="Center" Canvas.Bottom="28" FontSize="36" Foreground="White" Canvas.Left="10" Canvas.Top="313"/>
+                   HorizontalContentAlignment="Center" Canvas.Bottom="28" FontSize="36" Foreground="White" 
+                   Canvas.Left="10" Canvas.Top="313"/>
             <Button Name="BtnStart" Canvas.Left="389" Canvas.Top="270" Width="92" FontSize="20" 
                     Content="Start" Height="38" Click="ButtonStart_Click" />
         </Canvas>
         <Canvas Name="PlayerView" Visibility="Collapsed">
             <Button Name="BtnDropOut" Content="Drop Out" Width="99" Canvas.Left="783" Canvas.Top="524" Height="36" 
-                    FontSize="15" Click="BtnDropOut_Click"/>
+                    FontSize="15" Click="BtnDropOut_Click" Visibility="Hidden"/>
             <Label Name="LblStatus" Content="Status Bar" Canvas.Left="681" Canvas.Top="10" Height="45" Width="117" 
                    FontSize="20" Foreground="White"/>
             <TextBox Name="TxtBoxStatusBar" Text="Status of game here." Canvas.Left="652" Canvas.Top="55" Width="159" 

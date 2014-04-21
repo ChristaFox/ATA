@@ -34,11 +34,11 @@ namespace Apples_To_Apples
 
         public void DealCards(Canvas view)
         {
-            int lefty = 15;
+            int lefty = 27;
             for (int i = 0; i < 5; i++)
             {
-                DrawCard(lefty, 300, "Test", Brushes.Red, view);
-                lefty += 165;
+                DrawCard(lefty, 310, "Test", Brushes.Red, view);
+                lefty += 170;
             }
         }
 
