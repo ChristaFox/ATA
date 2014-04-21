@@ -39,7 +39,7 @@ namespace Apples_To_Apples
         {
             using (applesContext = new ApplesToApplesDBEntities())
             {
-                var departmentQuery = from d in applesContext.RedDeckOfCards
+                IEnumerable<String> departmentQuery = from d in applesContext.RedDeckOfCards
                      select d.noun;
 
                 int lefty = 26;
@@ -47,11 +47,8 @@ namespace Apples_To_Apples
                 {
                     Random rand = new Random();
                     Int32 j = rand.Next(0, 27);
-                    String cardInfo = "null";
 
-                    //departmentQuery.ElementAt(j).ToString()
-
-                    DrawCard(lefty, 315, cardInfo, Brushes.Red, view);
+                    DrawCard(lefty, 315, departmentQuery.ElementAt(j), Brushes.Red, view);
                     lefty += 170;
                 }
             }
