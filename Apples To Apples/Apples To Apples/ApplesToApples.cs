@@ -47,8 +47,11 @@ namespace Apples_To_Apples
                 {
                     Random rand = new Random();
                     Int32 j = rand.Next(0, 27);
+                    String cardInfo = "null";
 
-                    DrawCard(lefty, 315, departmentQuery.ElementAt(j).ToString(), Brushes.Red, view);
+                    //departmentQuery.ElementAt(j).ToString()
+
+                    DrawCard(lefty, 315, cardInfo, Brushes.Red, view);
                     lefty += 170;
                 }
             }
