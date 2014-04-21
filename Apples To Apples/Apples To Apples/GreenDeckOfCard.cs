@@ -16,5 +16,7 @@ namespace Apples_To_Apples
     {
         public int num { get; set; }
         public string adj { get; set; }
+
+        public EnvironmentVariableTarget ToString { get; set; }
     }
 }

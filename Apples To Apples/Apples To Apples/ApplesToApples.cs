@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -34,15 +35,34 @@ namespace Apples_To_Apples
 
         public void DealCards(Canvas view)
         {
+            ApplesToApplesDBEntities applesContext;
             int lefty = 15;
             for (int i = 0; i < 5; i++)
             {
-                DrawCard(lefty, 300, "Test", Brushes.Red, view);
+                //SqlConnection connect = new SqlConnection();
+                //SqlCommand sqlCmd = new SqlCommand();
+                //sqlCmd.CommandType = System.Data.CommandType.Text;
+                //sqlCmd.CommandText = "";
+                //sqlCmd.Connection = connect;
+                //connect.Open();
+                //ParamArrayAttribute = sqlCmd.Parameters.Add(new _SqlParameter(SqlDbType.Int32))
+                Random rand = new Random();
+                Int32 j = rand.Next(0, 20);
+                //string cardInfo = sqlCmd[j];
+                //using (applesContext = new ApplesToApplesDBEntities)
+                //{
+                //    var departmentQuery = from d in applesContext.GreenDeckOfCards
+                        
+                //}
+                var cardInfo = applesContext.RedDeckOfCards.ElementAt(j);
+
+                DrawCard(lefty, 300, cardInfo.ToString(), Brushes.Red, view);
                 lefty += 165;
             }
         }
 
-        public void DrawCard(int left, int top, String message, SolidColorBrush color, Canvas canvas)
+        public void DrawCard(int left, int top, string message,
+            SolidColorBrush color, Canvas canvas)
         {
             DrawRectangle(150, 200, left, top, Brushes.White, canvas);
             DrawRectangle(130, 180, left + 10, top + 10, color, canvas);
