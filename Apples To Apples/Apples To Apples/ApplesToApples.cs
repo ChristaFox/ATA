@@ -37,33 +37,21 @@ namespace Apples_To_Apples
 
         public void DealCards(Canvas view)
         {
-            int lefty = 26;
-            int randomNumber = 0;
-            string cardInfo = "null";
-            using (var context = new ApplesToApplesDBEntities())
+            using (applesContext = new ApplesToApplesDBEntities())
             {
-                var cards = context.RedDeckOfCards.SqlQuery("dbo.RedDeckOfCards").ToList();
+                IEnumerable<String> departmentQuery = from d in applesContext.RedDeckOfCards
+                     select d.noun;
+
+                int lefty = 26;
                 for (int i = 0; i < 5; i++)
                 {
-                    foreach (var el in cards)
-                    {
-                        Random rand = new Random();
-                        randomNumber = rand.Next(0, 87);
-                        //cardInfo = el.noun.ToString;
-                    }
+                    Random rand = new Random();
+                    Int32 j = rand.Next(0, 27);
 
-
-                    DrawCard(lefty, 315, cardInfo, Brushes.Red, view);
+                    DrawCard(lefty, 315, departmentQuery.ElementAt(j), Brushes.Red, view);
                     lefty += 170;
                 }
-            }
-            //using (applesContext = new ApplesToApplesDBEntities())
-            //{
-            //    var departmentQuery = from d in applesContext.RedDeckOfCards
-            //                          orderby d.noun
-            //                          select d.noun[randomNumber];
-            //}
-          
+            }  
         }
 
         public void DrawCard(int left, int top, string message,
