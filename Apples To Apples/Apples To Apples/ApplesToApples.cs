@@ -75,7 +75,7 @@ namespace Apples_To_Apples
             TextBlock cardLbl = new TextBlock();
             cardLbl.Text = message;
             cardLbl.TextAlignment = System.Windows.TextAlignment.Center;
-            cardLbl.FontSize = 20;
+            cardLbl.FontSize = 18;
             cardLbl.Width = 108;
             cardLbl.FontWeight = System.Windows.FontWeights.Bold;
             cardLbl.TextWrapping = System.Windows.TextWrapping.Wrap;
