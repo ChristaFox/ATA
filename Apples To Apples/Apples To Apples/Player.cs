@@ -10,7 +10,7 @@ namespace Apples_To_Apples
     {
         public int playerNum; //we will need to update this once we figure out how many players are connected
         public int awesomePoints = 0;
-        public Boolean isJudge = false;
+        public Boolean isJudge = true;
 
         public Player(int number)
         {
