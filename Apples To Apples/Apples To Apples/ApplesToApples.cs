@@ -54,6 +54,11 @@ namespace Apples_To_Apples
             }  
         }
 
+        public void DealAdjCard(Canvas view)
+        {
+            DrawCard(270, 100, "Test", Brushes.GreenYellow, view);
+        }
+
         public void DrawCard(int left, int top, string message,
             SolidColorBrush color, Canvas canvas)
         {
@@ -64,7 +69,7 @@ namespace Apples_To_Apples
             cardLbl.Text = message;
             cardLbl.TextAlignment = System.Windows.TextAlignment.Center;
             cardLbl.FontSize = 20;
-            cardLbl.Width = 110;
+            cardLbl.Width = 108;
             cardLbl.FontWeight = System.Windows.FontWeights.Bold;
             cardLbl.TextWrapping = System.Windows.TextWrapping.Wrap;
 
