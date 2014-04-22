@@ -63,12 +63,14 @@ namespace Apples_To_Apples
             TextBlock cardLbl = new TextBlock();
             cardLbl.Text = message;
             cardLbl.TextAlignment = System.Windows.TextAlignment.Center;
-            cardLbl.Width = 10;
+            cardLbl.FontSize = 20;
+            cardLbl.Width = 110;
+            cardLbl.FontWeight = System.Windows.FontWeights.Bold;
             cardLbl.TextWrapping = System.Windows.TextWrapping.Wrap;
 
             canvas.Children.Add(cardLbl);
-            Canvas.SetLeft(cardLbl, left + 10);
-            Canvas.SetTop(cardLbl, top + 10);
+            Canvas.SetLeft(cardLbl, left + 20);
+            Canvas.SetTop(cardLbl, top + 30);
         }
 
         public void DrawRectangle(int width, int height, int left, int top, SolidColorBrush color, Canvas canvas)
