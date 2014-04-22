@@ -24,7 +24,6 @@ namespace Apples_To_Apples
         public ApplesToApples()
         {
             newPlayer = new Player(1);
-            //MainWindow.StartPage.LblPlayerNum_1.Content = newPlayer.playerNum;
         }
 
         public void StartGame(Canvas view)
@@ -46,7 +45,7 @@ namespace Apples_To_Apples
                 for (int i = 0; i < 5; i++)
                 {
                     Random rand = new Random();
-                    Int32 j = rand.Next(0, 27);
+                    Int32 j = rand.Next(0, 87);
 
                     DrawCard(lefty, 315, departmentQuery.ElementAt(j), Brushes.Red, view);
                     lefty += 170;
@@ -56,7 +55,15 @@ namespace Apples_To_Apples
 
         public void DealAdjCard(Canvas view)
         {
-            DrawCard(270, 100, "Test", Brushes.GreenYellow, view);
+            Random rand = new Random();
+            Int32 j = rand.Next(0, 44);
+            using (applesContext = new ApplesToApplesDBEntities())
+            {
+                IEnumerable<String> query = from d in applesContext.GreenDeckOfCards
+                            where d.num == j
+                            select d.adj;
+                DrawCard(270, 100, query.ElementAt(0), Brushes.GreenYellow, view);
+            }
         }
 
         public void DrawCard(int left, int top, string message,
