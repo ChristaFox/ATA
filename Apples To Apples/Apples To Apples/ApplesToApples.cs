@@ -60,8 +60,11 @@ namespace Apples_To_Apples
             DrawRectangle(150, 200, left, top, Brushes.White, canvas);
             DrawRectangle(130, 180, left + 10, top + 10, color, canvas);
 
-            Label cardLbl = new Label();
-            cardLbl.Content = message;
+            TextBlock cardLbl = new TextBlock();
+            cardLbl.Text = message;
+            cardLbl.TextAlignment = System.Windows.TextAlignment.Center;
+            cardLbl.Width = 10;
+            cardLbl.TextWrapping = System.Windows.TextWrapping.Wrap;
 
             canvas.Children.Add(cardLbl);
             Canvas.SetLeft(cardLbl, left + 10);
