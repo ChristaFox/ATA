@@ -48,7 +48,7 @@
                     FontSize="15" Click="BtnDropOut_Click" Visibility="Hidden"/>
             <Label Name="LblStatus" Content="Status Bar" Canvas.Left="681" Canvas.Top="10" Height="45" Width="117" 
                    FontSize="20" Foreground="White"/>
-            <TextBox Name="TxtBoxStatusBar" Text="Status of game here." Canvas.Left="652" Canvas.Top="55" Width="159" 
+            <TextBox Name="TxtBoxStatusBar" Text="Waiting for judge to draw..." Canvas.Left="652" Canvas.Top="55" Width="159" 
                      Height="68" />
             <Label Name="LblPlayer" Content="Player" Foreground="White" Canvas.Left="31" Canvas.Top="29" FontSize="25"/>
             <Label Name="LblPlyrNum_2" Content="0" Foreground="White" Height="37" Width="37" Canvas.Left="108" 
@@ -63,7 +63,7 @@
                     FontSize="15" Click="BtnEnd_Click"/>
             <Label Name="LblStatus_J" Content="Status Bar" Canvas.Left="681" Canvas.Top="10" Height="45" Width="117" 
                    FontSize="20" Foreground="White"/>
-            <TextBox Name="TxtBoxStatusBar_J" Text="Status of game here." Canvas.Left="652" Canvas.Top="55" Width="159" 
+            <TextBox Name="TxtBoxStatusBar_J" Text="Waiting for judge to draw..." Canvas.Left="652" Canvas.Top="55" Width="159" 
                      Height="68" />
             <Label Name="LblPlayer_J" Content="Player" Foreground="White" Canvas.Left="31" Canvas.Top="29" FontSize="25"/>
             <Label Name="LblPlyrNum_2_J" Content="0" Foreground="White" Height="37" Width="37" Canvas.Left="108" 
