@@ -43,12 +43,15 @@ namespace Apples_To_Apples
             if (IsJudge())
             {
                 JudgeView.Visibility = System.Windows.Visibility.Visible;
+                TxtBoxStatusBar_J.Text = newGame.STATUS_WAITING_FOR_JUDGE_TO_DRAW;
+                LblPlyrNum_2_J.Content = newGame.newPlayer.playerNum;
             }
             else
             {
                 PlayerView.Visibility = System.Windows.Visibility.Visible;
                 TxtBoxStatusBar.Text = newGame.STATUS_WAITING_FOR_JUDGE_TO_DRAW;
                 newGame.StartGame(PlayerView);
+                LblPlyrNum_2.Content = newGame.newPlayer.playerNum;
             }
         }
 

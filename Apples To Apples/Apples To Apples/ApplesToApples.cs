@@ -25,20 +25,34 @@ namespace Apples_To_Apples
         public String STATUS_WAITING_FOR_PLAYERS_TO_CHOOSE = "Waiting for players to choose...";
         public String STATUS_WAITING_FOR_JUDGE_TO_CHOOSE = "Waiting for judge to choose...";
         public String STATUS_YOU_LOST = "Sorry, your card was not chosen by the judge. Better luck next time!";
-        public String STATUS_YOU_LOST = "Congratulations! Your card was chosen by the judge. Your awesome points have been awarded.";
+        public String STATUS_YOU_WON = "Congratulations! Your card was chosen by the judge. Your awesome points have been awarded.";
         public String STATUS_WAITING_FOR_NEXT_ROUND = "Waiting on players to continue or drop out...";
 
         public ApplesToApples()
         {
-            newPlayer = new Player(1); // pass in assigned player number from website
+            newPlayer = new Player(2); // pass in assigned player number from website
         }
 
         public void StartGame(Canvas view)
         {
+            //selectJudge();
+
             if(!newPlayer.isJudge)
             {
                 DealCards(view);
             }
+        }
+
+        public void selectJudge()
+        {
+            Random rand = new Random();
+            int judge = rand.Next(1, 5); //this is the player number who will be judge this round.
+                                             //this number needs to be passed to website to all instances of running game.
+            if (newPlayer.playerNum == judge)
+                newPlayer.isJudge = true;
+            else
+                newPlayer.playerNum = judge;
+
         }
 
         public void DealCards(Canvas view)
