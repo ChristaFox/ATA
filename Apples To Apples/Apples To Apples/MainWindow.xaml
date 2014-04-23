@@ -64,7 +64,7 @@
             <Label Name="LblStatus_J" Content="Status Bar" Canvas.Left="681" Canvas.Top="10" Height="45" Width="117" 
                    FontSize="20" Foreground="White"/>
             <TextBox Name="TxtBoxStatusBar_J" Text="Waiting for judge to draw..." Canvas.Left="652" Canvas.Top="55" Width="159" 
-                     Height="68" />
+                     Height="68" TextWrapping="Wrap" />
             <Label Name="LblPlayer_J" Content="Player" Foreground="White" Canvas.Left="31" Canvas.Top="29" FontSize="25"/>
             <Label Name="LblPlyrNum_2_J" Content="0" Foreground="White" Height="37" Width="37" Canvas.Left="108" 
                    Canvas.Top="29" FontSize="25"/>

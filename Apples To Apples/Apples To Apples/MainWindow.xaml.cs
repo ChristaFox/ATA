@@ -72,6 +72,7 @@ namespace Apples_To_Apples
         {
             BtnDrawCard.IsEnabled = false;
             newGame.DealAdjCard(JudgeView);
+            TxtBoxStatusBar_J.Text = newGame.STATUS_WAITING_FOR_PLAYERS_TO_CHOOSE;
         }
     }
 }
