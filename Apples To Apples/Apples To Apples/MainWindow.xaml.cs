@@ -25,10 +25,10 @@ namespace Apples_To_Apples
         public MainWindow()
         {
             InitializeComponent();
-            LblPlayerNum_1.Content = newGame.newPlayer.playerNum;
-
             //create new game
             newGame = new ApplesToApples();
+
+            LblPlayerNum_1.Content = newGame.newPlayer.playerNum;
         }
 
         public Boolean IsJudge()
