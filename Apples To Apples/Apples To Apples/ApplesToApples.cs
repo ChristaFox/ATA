@@ -16,8 +16,15 @@ namespace Apples_To_Apples
         public Player newPlayer;
         public int numOfPlayers = 1; // we will also need to retrieve this from the website
 
-        public Boolean judgeHasDrawn = false;
-        public Boolean allPlayersHaveChosen = false;
+        public Boolean judgeHasDrawn = false; // this bool is only used for instances of the game where
+                                              // the player is not the judge this round - this gets changed
+                                              // once the player that IS the judge draws. Therefore once
+                                              // the judge draws, 'true' is passed to website and to other
+                                              // instances of the running game.
+        public Boolean allPlayersHaveChosen = false; // this bool is just the opposite - it is only used in 
+                                                     // the instance of the game where the player is the judge.
+                                                     // Therefore, 'true' needs to be passed to website and to
+                                                     // the judge's instance of running game.
 
         ApplesToApplesDBEntities applesContext;
 
@@ -35,7 +42,7 @@ namespace Apples_To_Apples
 
         public void StartGame(Canvas view)
         {
-            //selectJudge();
+            selectJudge();
 
             if(!newPlayer.isJudge)
             {
@@ -47,7 +54,7 @@ namespace Apples_To_Apples
         {
             Random rand = new Random();
             int judge = rand.Next(1, 5); //this is the player number who will be judge this round.
-                                             //this number needs to be passed to website to all instances of running game.
+                                         //this number needs to be passed to website to all instances of running game.
             if (newPlayer.playerNum == judge)
                 newPlayer.isJudge = true;
             else

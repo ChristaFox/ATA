@@ -40,6 +40,10 @@ namespace Apples_To_Apples
         {
             StartPage.Visibility = System.Windows.Visibility.Collapsed;
             LblTitle.Visibility = System.Windows.Visibility.Collapsed;
+
+            //playerView passed in for dealing cards
+            newGame.StartGame(PlayerView);
+
             if (IsJudge())
             {
                 JudgeView.Visibility = System.Windows.Visibility.Visible;
@@ -48,7 +52,6 @@ namespace Apples_To_Apples
             else
             {
                 PlayerView.Visibility = System.Windows.Visibility.Visible;
-                newGame.StartGame(PlayerView);
                 LblPlyrNum_2.Content = newGame.newPlayer.playerNum;
             }
         }
