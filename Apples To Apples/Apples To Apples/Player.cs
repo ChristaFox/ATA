@@ -8,7 +8,7 @@ namespace Apples_To_Apples
 {
     class Player
     {
-        public int playerNum; //we will need to update this once we figure out how many players are connected
+        public int playerNum; //we will need to figure out how to retrieve this num from website
         public int awesomePoints = 0;
         public Boolean isJudge = true;
 

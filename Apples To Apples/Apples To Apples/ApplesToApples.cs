@@ -14,16 +14,23 @@ namespace Apples_To_Apples
     class ApplesToApples
     {
         public Player newPlayer;
-        public int numOfPlayers = 1;
+        public int numOfPlayers = 1; // we will also need to retrieve this from the website
+
+        public Boolean judgeHasDrawn = false;
+        public Boolean allPlayersHaveChosen = false;
 
         ApplesToApplesDBEntities applesContext;
 
         public String STATUS_WAITING_FOR_JUDGE_TO_DRAW = "Waiting for judge to draw...";
         public String STATUS_WAITING_FOR_PLAYERS_TO_CHOOSE = "Waiting for players to choose...";
+        public String STATUS_WAITING_FOR_JUDGE_TO_CHOOSE = "Waiting for judge to choose...";
+        public String STATUS_YOU_LOST = "Sorry, your card was not chosen by the judge. Better luck next time!";
+        public String STATUS_YOU_LOST = "Congratulations! Your card was chosen by the judge. Your awesome points have been awarded.";
+        public String STATUS_WAITING_FOR_NEXT_ROUND = "Waiting on players to continue or drop out...";
 
         public ApplesToApples()
         {
-            newPlayer = new Player(1);
+            newPlayer = new Player(1); // pass in assigned player number from website
         }
 
         public void StartGame(Canvas view)
