@@ -15,9 +15,6 @@ using System.Windows.Shapes;
 
 namespace Apples_To_Apples
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         ApplesToApples newGame; 
@@ -29,11 +26,16 @@ namespace Apples_To_Apples
             newGame = new ApplesToApples();
 
             LblPlayerNum_1.Content = newGame.newPlayer.playerNum;
+            CorrectNumOfPlayers();
         }
 
-        public Boolean IsJudge()
+        //we need to figure out how to get this to continuously check until numOfPlayers is in correct range
+        private void CorrectNumOfPlayers()
         {
-            return newGame.newPlayer.isJudge;
+            if (newGame.numOfPlayers < 2)
+                BtnStart.IsEnabled = false;
+            if (newGame.numOfPlayers > 5)
+                BtnStart.IsEnabled = false;
         }
 
         private void ButtonStart_Click(object sender, RoutedEventArgs e)
@@ -60,6 +62,7 @@ namespace Apples_To_Apples
         {
             JudgeView.Visibility = System.Windows.Visibility.Collapsed;
             ResultsPage.Visibility = System.Windows.Visibility.Visible;
+            newGame.endGameForAll(ResultsPage);
         }
 
         private void BtnDropOut_Click(object sender, RoutedEventArgs e)
@@ -72,7 +75,13 @@ namespace Apples_To_Apples
         {
             BtnDrawCard.IsEnabled = false;
             newGame.DealAdjCard(JudgeView);
+            newGame.judgeHasDrawn = true; // remember, we need to invoke this in all instances of game 
             TxtBoxStatusBar_J.Text = newGame.STATUS_WAITING_FOR_PLAYERS_TO_CHOOSE;
+        }
+
+        public Boolean IsJudge()
+        {
+            return newGame.newPlayer.isJudge;
         }
     }
 }

@@ -14,7 +14,7 @@ namespace Apples_To_Apples
     class ApplesToApples
     {
         public Player newPlayer;
-        public int numOfPlayers = 1; // we will also need to retrieve this from the website
+        public int numOfPlayers = 5; // we will also need to retrieve this from the website
 
         public Boolean judgeHasDrawn = false; // this bool is only used for instances of the game where
                                               // the player is not the judge this round - this gets changed
@@ -40,6 +40,14 @@ namespace Apples_To_Apples
             newPlayer = new Player(2); // pass in assigned player number from website
         }
 
+        /* This method is important - it needs to be implemented every time someone new starts the app.
+         * 
+         */
+        public void newPlayerSignedOn()
+        {
+            numOfPlayers++;
+        }
+
         public void StartGame(Canvas view)
         {
             selectJudge();
@@ -53,7 +61,7 @@ namespace Apples_To_Apples
         public void selectJudge()
         {
             Random rand = new Random();
-            int judge = rand.Next(1, 5); //this is the player number who will be judge this round.
+            int judge = rand.Next(1, numOfPlayers+1); //this is the player number who will be judge this round.
                                          //this number needs to be passed to website to all instances of running game.
             if (newPlayer.playerNum == judge)
                 newPlayer.isJudge = true;
@@ -122,6 +130,11 @@ namespace Apples_To_Apples
             canvas.Children.Add(rect);
             Canvas.SetLeft(rect, left);
             Canvas.SetTop(rect, top);
+        }
+
+        public void endGameForAll(Canvas resultspg)
+        {
+
         }
     }
 }
