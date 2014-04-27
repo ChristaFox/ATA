@@ -83,5 +83,27 @@ namespace Apples_To_Apples
         {
             return newGame.newPlayer.isJudge;
         }
+
+        //choose button click methods
+        private void BtnChooseC1_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void BtnChooseC2_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void BtnChooseC3_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void BtnChooseC4_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void BtnChooseC5_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

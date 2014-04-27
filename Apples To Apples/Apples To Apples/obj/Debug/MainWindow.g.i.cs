@@ -451,18 +451,48 @@ namespace Apples_To_Apples {
             return;
             case 17:
             this.BtnChooseC1 = ((System.Windows.Controls.Button)(target));
+            
+            #line 60 "..\..\MainWindow.xaml"
+            this.BtnChooseC1.Click += new System.Windows.RoutedEventHandler(this.BtnChooseC1_Click);
+            
+            #line default
+            #line hidden
             return;
             case 18:
             this.BtnChooseC2 = ((System.Windows.Controls.Button)(target));
+            
+            #line 61 "..\..\MainWindow.xaml"
+            this.BtnChooseC2.Click += new System.Windows.RoutedEventHandler(this.BtnChooseC2_Click);
+            
+            #line default
+            #line hidden
             return;
             case 19:
             this.BtnChooseC3 = ((System.Windows.Controls.Button)(target));
+            
+            #line 62 "..\..\MainWindow.xaml"
+            this.BtnChooseC3.Click += new System.Windows.RoutedEventHandler(this.BtnChooseC3_Click);
+            
+            #line default
+            #line hidden
             return;
             case 20:
             this.BtnChooseC4 = ((System.Windows.Controls.Button)(target));
+            
+            #line 63 "..\..\MainWindow.xaml"
+            this.BtnChooseC4.Click += new System.Windows.RoutedEventHandler(this.BtnChooseC4_Click);
+            
+            #line default
+            #line hidden
             return;
             case 21:
             this.BtnChooseC5 = ((System.Windows.Controls.Button)(target));
+            
+            #line 64 "..\..\MainWindow.xaml"
+            this.BtnChooseC5.Click += new System.Windows.RoutedEventHandler(this.BtnChooseC5_Click);
+            
+            #line default
+            #line hidden
             return;
             case 22:
             this.JudgeView = ((System.Windows.Controls.Canvas)(target));
