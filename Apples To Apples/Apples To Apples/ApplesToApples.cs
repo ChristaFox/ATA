@@ -15,6 +15,7 @@ namespace Apples_To_Apples
     {
         public Player newPlayer;
         public int numOfPlayers = 5; // we will also need to retrieve this from the website
+        public String[] hand = new String[5];
 
         public Boolean judgeHasDrawn = false; // this bool is only used for instances of the game where
                                               // the player is not the judge this round - this gets changed
@@ -72,18 +73,24 @@ namespace Apples_To_Apples
 
         public void DealCards(Canvas view)
         {
+            Random rand = new Random();
+            Int32 j = rand.Next(0, 87);
             using (applesContext = new ApplesToApplesDBEntities())
             {
-                IEnumerable<String> departmentQuery = from d in applesContext.RedDeckOfCards
-                     select d.noun;
+                for (int i = 0; i < 5; i++)
+                {
+                    IEnumerable<String> departmentQuery = from d in applesContext.RedDeckOfCards
+                          where d.ID == j
+                          select d.noun;
+                    hand[i] = departmentQuery.ElementAt(0);
+                    j = rand.Next(0, 87);
+                }
 
                 int lefty = 26;
                 for (int i = 0; i < 5; i++)
                 {
-                    Random rand = new Random();
-                    Int32 j = rand.Next(0, 87);
-
-                    DrawCard(lefty, 315, departmentQuery.ElementAt(j), Brushes.Red, view);
+                    
+                    DrawCard(lefty, 315, hand.ElementAt(i), Brushes.Red, view);
                     lefty += 170;
                 }
             }  
