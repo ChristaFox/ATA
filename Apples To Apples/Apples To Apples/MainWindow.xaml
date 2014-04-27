@@ -57,11 +57,11 @@
                    FontSize="21"/>
             <TextBox Name="TxtBoxAwesomePts" Text="0" Canvas.Left="133" Canvas.Top="153" Height="40" Width="43" 
                      HorizontalContentAlignment="Center" FontSize="20" HorizontalAlignment="Center"/>
-            <Button Name="BtnChooseC1" Content="Choose" Canvas.Left="76" Canvas.Top="522"/>
-            <Button Name="BtnChooseC2" Content="Choose" Canvas.Left="248" Canvas.Top="522"/>
-            <Button Name="BtnChooseC3" Content="Choose" Canvas.Left="416" Canvas.Top="522"/>
-            <Button Name="BtnChooseC4" Content="Choose" Canvas.Left="592" Canvas.Top="522"/>
-            <Button Name="BtnChooseC5" Content="Choose" Canvas.Left="737" Canvas.Top="522"/>
+            <Button Name="BtnChooseC1" Content="Choose" Canvas.Left="70" Canvas.Top="520"/>
+            <Button Name="BtnChooseC2" Content="Choose" Canvas.Left="241" Canvas.Top="520"/>
+            <Button Name="BtnChooseC3" Content="Choose" Canvas.Left="411" Canvas.Top="520"/>
+            <Button Name="BtnChooseC4" Content="Choose" Canvas.Left="582" Canvas.Top="520"/>
+            <Button Name="BtnChooseC5" Content="Choose" Canvas.Left="753" Canvas.Top="520"/>
         </Canvas>
         <Canvas Name="JudgeView" Visibility="Collapsed">
             <Button Name="BtnEndGame_J" Content="End Game" Width="99" Canvas.Left="783" Canvas.Top="524" Height="36" 
