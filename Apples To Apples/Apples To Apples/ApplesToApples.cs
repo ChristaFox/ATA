@@ -72,18 +72,19 @@ namespace Apples_To_Apples
 
         public void DealCards(Canvas view)
         {
+            IEnumerable<String> departmentQuery;
+            Random rand = new Random();
+            Int32 j = rand.Next(0, 87);
             using (applesContext = new ApplesToApplesDBEntities())
             {
-                IEnumerable<String> departmentQuery = from d in applesContext.RedDeckOfCards
+                departmentQuery. = from d in applesContext.RedDeckOfCards
+                     where d.ID == j
                      select d.noun;
 
                 int lefty = 26;
                 for (int i = 0; i < 5; i++)
                 {
-                    Random rand = new Random();
-                    Int32 j = rand.Next(0, 87);
-
-                    DrawCard(lefty, 315, departmentQuery.ElementAt(j), Brushes.Red, view);
+                    DrawCard(lefty, 315, departmentQuery.ElementAt(i), Brushes.Red, view);
                     lefty += 170;
                 }
             }  
