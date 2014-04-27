@@ -87,23 +87,32 @@ namespace Apples_To_Apples
         //choose button click methods
         private void BtnChooseC1_Click(object sender, RoutedEventArgs e)
         {
-
+            allChooseBtns(false);
         }
         private void BtnChooseC2_Click(object sender, RoutedEventArgs e)
         {
-
+            allChooseBtns(false);
         }
         private void BtnChooseC3_Click(object sender, RoutedEventArgs e)
         {
-
+            allChooseBtns(false);
         }
         private void BtnChooseC4_Click(object sender, RoutedEventArgs e)
         {
-
+            allChooseBtns(false);
         }
         private void BtnChooseC5_Click(object sender, RoutedEventArgs e)
         {
+            allChooseBtns(false);
+        }
 
+        private void allChooseBtns(Boolean b)
+        {
+            BtnChooseC1.IsEnabled = b;
+            BtnChooseC2.IsEnabled = b;
+            BtnChooseC3.IsEnabled = b;
+            BtnChooseC4.IsEnabled = b;
+            BtnChooseC5.IsEnabled = b;
         }
     }
 }
