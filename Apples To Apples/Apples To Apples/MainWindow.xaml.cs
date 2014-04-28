@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -49,6 +50,19 @@ namespace Apples_To_Apples
 
                 foreach (GameInfo row in departmentQuery)
                     row.NumberOfPlayers += 1;
+            }
+        }
+
+        private void MainWindow_Closing(object sender, CancelEventArgs e)
+        {
+            using (applesContext = new ApplesToApplesDBEntities())
+            {
+
+                IEnumerable<GameInfo> departmentQuery = from d in applesContext.GameInfo
+                                                        select d;
+
+                foreach (GameInfo row in departmentQuery)
+                    row.NumberOfPlayers -= 1;
             }
         }
 
