@@ -36,15 +36,15 @@ namespace Apples_To_Apples
             
         }
 
-        private void CorrectNumOfPlayers()
+        /*private void CorrectNumOfPlayers()
         {
             if (newGame.numOfPlayers < 2)
                 BtnStart.IsEnabled = false;
             if (newGame.numOfPlayers > 5)
                 BtnStart.IsEnabled = false;
-        }
+        }*/
 
-        private void incrementNumOfPlayers()
+        /*private void incrementNumOfPlayers()
         {
             using (applesContext = new ApplesToApplesDBEntities())
             {
@@ -70,7 +70,7 @@ namespace Apples_To_Apples
                 foreach (GameInfo row in departmentQuery)
                     row.NumberOfPlayers -= 1;
             }
-        }
+        }*/
 
         private void ButtonStart_Click(object sender, RoutedEventArgs e)
         {
@@ -113,6 +113,7 @@ namespace Apples_To_Apples
             newGame.DealAdjCard(JudgeView, 270, 100);
             newGame.judgeHasDrawn = true; // PASS THIS INTO TABLE 
             TxtBoxStatusBar_J.Text = newGame.STATUS_WAITING_FOR_PLAYERS_TO_CHOOSE;
+            BtnSeePlyrsCards.Visibility = System.Windows.Visibility.Visible;
         }
 
         public Boolean IsJudge()
@@ -131,6 +132,11 @@ namespace Apples_To_Apples
         {
             PlayerView.Visibility = System.Windows.Visibility.Collapsed;
             ChoicesPg.Visibility = System.Windows.Visibility.Visible;
+        }
+
+        private void BtnSeePlyrsCards_Click(object sender, RoutedEventArgs e)
+        {
+            newGame.DealCards(JudgeView);
         }
 
         //choose button click methods
@@ -202,10 +208,11 @@ namespace Apples_To_Apples
 
         private void NewRound()
         {
-            newGame = new ApplesToApples();
+            newGame.StartGame(PlayerView);
             LblYourCard.Visibility = System.Windows.Visibility.Hidden;
             BtnSeeChoice.Visibility = System.Windows.Visibility.Hidden;
             newGame.DrawRectangle(150, 200, 275, 40, Brushes.Black, PlayerView);
+            newGame.DrawRectangle(150, 200, 475, 40, Brushes.Black, PlayerView);
             Button NewBtnSeeJudgeCard = new Button();
             NewBtnSeeJudgeCard.Content = "View Judge's Card";
             NewBtnSeeJudgeCard.Height = 39;

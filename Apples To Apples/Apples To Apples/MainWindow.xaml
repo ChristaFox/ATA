@@ -2,7 +2,7 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Background="Black"
-        Title="Apples to Apples" Height="600" Width="900" Closing="MainWindow_Closing">
+        Title="Apples to Apples" Height="600" Width="900">
 
     <Window.Resources>
         <Style x:Key="TitleStyle" TargetType="Label" >
@@ -69,8 +69,7 @@
                     Width="160" FontSize="15" Visibility="Hidden" Click="BtnSeeChoice_Click"/>
         </Canvas>
         <Canvas Name="JudgeView" Visibility="Collapsed">
-            <Button Name="BtnEndGame_J" Content="End Game" Width="99" Canvas.Left="783" Canvas.Top="524" Height="36" 
-                    FontSize="15" Click="BtnEnd_Click"/>
+            
             <Label Name="LblStatus_J" Content="Status Bar" Canvas.Left="681" Canvas.Top="10" Height="45" Width="117" 
                    FontSize="20" Foreground="White"/>
             <TextBox Name="TxtBoxStatusBar_J" Text="Waiting for judge to draw..." Canvas.Left="652" Canvas.Top="55" Width="159" 
@@ -86,6 +85,8 @@
                    Canvas.Top="34" FontSize="20"/>
             <Button Name="BtnDrawCard" Content="Draw" Canvas.Left="698" Canvas.Top="179" Height="200" Width="150" 
                     FontSize="21" Click="BtnDrawCard_Click" Background="GreenYellow"/>
+            <Button Name="BtnSeePlyrsCards" Content="See Players' Choices" Canvas.Left="483" Canvas.Top="160" 
+                    Height="47" Width="145" FontSize="13" Visibility="Hidden" Click="BtnSeePlyrsCards_Click"/>
         </Canvas>
         <Canvas Name="ResultsPage" Visibility="Collapsed">
             <Label Name="LblGameOver" Content="Game Over" Foreground="Orange" Height="61" Width="892" 
