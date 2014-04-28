@@ -57,13 +57,6 @@ C:\Users\Camille\Documents\GitHub\ATA\Apples To Apples\Apples To Apples\bin\Debu
 C:\Users\Camille\Documents\GitHub\ATA\Apples To Apples\Apples To Apples\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\Camille\Documents\GitHub\ATA\Apples To Apples\Apples To Apples\bin\Debug\EntityFramework.xml
 C:\Users\Camille\Documents\GitHub\ATA\Apples To Apples\Apples To Apples\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\Christa\Documents\GitHub\ATA\Apples To Apples\Apples To Apples\obj\Debug\MainWindow.baml
-C:\Users\Christa\Documents\GitHub\ATA\Apples To Apples\Apples To Apples\obj\Debug\MainWindow.g.cs
-C:\Users\Christa\Documents\GitHub\ATA\Apples To Apples\Apples To Apples\obj\Debug\App.g.cs
-C:\Users\Christa\Documents\GitHub\ATA\Apples To Apples\Apples To Apples\obj\Debug\Apples To Apples_MarkupCompile.cache
-C:\Users\Christa\Documents\GitHub\ATA\Apples To Apples\Apples To Apples\obj\Debug\Apples To Apples.g.resources
-C:\Users\Christa\Documents\GitHub\ATA\Apples To Apples\Apples To Apples\obj\Debug\Apples_To_Apples.Properties.Resources.resources
-C:\Users\Christa\Documents\GitHub\ATA\Apples To Apples\Apples To Apples\obj\Debug\Apples To Apples.csproj.GenerateResource.Cache
 C:\Users\Christa\Documents\GitHub\ATA\Apples To Apples\Apples To Apples\bin\Debug\Apples To Apples.exe.config
 C:\Users\Christa\Documents\GitHub\ATA\Apples To Apples\Apples To Apples\bin\Debug\Apples To Apples.exe
 C:\Users\Christa\Documents\GitHub\ATA\Apples To Apples\Apples To Apples\bin\Debug\Apples To Apples.pdb
@@ -71,5 +64,12 @@ C:\Users\Christa\Documents\GitHub\ATA\Apples To Apples\Apples To Apples\bin\Debu
 C:\Users\Christa\Documents\GitHub\ATA\Apples To Apples\Apples To Apples\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\Christa\Documents\GitHub\ATA\Apples To Apples\Apples To Apples\bin\Debug\EntityFramework.xml
 C:\Users\Christa\Documents\GitHub\ATA\Apples To Apples\Apples To Apples\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Christa\Documents\GitHub\ATA\Apples To Apples\Apples To Apples\obj\Debug\MainWindow.baml
+C:\Users\Christa\Documents\GitHub\ATA\Apples To Apples\Apples To Apples\obj\Debug\MainWindow.g.cs
+C:\Users\Christa\Documents\GitHub\ATA\Apples To Apples\Apples To Apples\obj\Debug\App.g.cs
+C:\Users\Christa\Documents\GitHub\ATA\Apples To Apples\Apples To Apples\obj\Debug\Apples To Apples_MarkupCompile.cache
+C:\Users\Christa\Documents\GitHub\ATA\Apples To Apples\Apples To Apples\obj\Debug\Apples To Apples.g.resources
+C:\Users\Christa\Documents\GitHub\ATA\Apples To Apples\Apples To Apples\obj\Debug\Apples_To_Apples.Properties.Resources.resources
+C:\Users\Christa\Documents\GitHub\ATA\Apples To Apples\Apples To Apples\obj\Debug\Apples To Apples.csproj.GenerateResource.Cache
 C:\Users\Christa\Documents\GitHub\ATA\Apples To Apples\Apples To Apples\obj\Debug\Apples To Apples.exe
 C:\Users\Christa\Documents\GitHub\ATA\Apples To Apples\Apples To Apples\obj\Debug\Apples To Apples.pdb

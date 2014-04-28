@@ -12,11 +12,9 @@ namespace Apples_To_Apples
     using System;
     using System.Collections.Generic;
     
-    public partial class UserLogin
+    public partial class GameInfo
     {
-        public int ProvidedID { get; set; }
-        public string UserName { get; set; }
-        public string Password { get; set; }
-        public string email { get; set; }
+        public int GameID { get; set; }
+        public int NumberOfPlayers { get; set; }
     }
 }

@@ -12,11 +12,9 @@ namespace Apples_To_Apples
     using System;
     using System.Collections.Generic;
     
-    public partial class UserLogin
+    public partial class RedDeckOfCard
     {
-        public int ProvidedID { get; set; }
-        public string UserName { get; set; }
-        public string Password { get; set; }
-        public string email { get; set; }
+        public int RedIndex { get; set; }
+        public string noun { get; set; }
     }
 }

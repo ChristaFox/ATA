@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="ApplesToApplesDBModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="GameInfo">
+          <Key>
+            <PropertyRef Name="GameID" />
+          </Key>
+          <Property Name="GameID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NumberOfPlayers" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="GreenDeckOfCards">
+          <Key>
+            <PropertyRef Name="GreenIndex" />
+          </Key>
+          <Property Name="GreenIndex" Type="int" Nullable="false" />
+          <Property Name="adj" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PlayerInfo">
+          <Key>
+            <PropertyRef Name="PlayerNumber" />
+          </Key>
+          <Property Name="PlayerNumber" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AwesomePoints" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="Choice" Type="nchar" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <EntityType Name="RedDeckOfCards">
+          <Key>
+            <PropertyRef Name="RedIndex" />
+          </Key>
+          <Property Name="RedIndex" Type="int" Nullable="false" />
+          <Property Name="noun" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="RoundInfo">
+          <Key>
+            <PropertyRef Name="Round" />
+          </Key>
+          <Property Name="Round" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="JudgeNumber" Type="int" Nullable="false" />
+          <Property Name="AdjectiveCard" Type="nchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="UseDeck">
+          <Key>
+            <PropertyRef Name="GameID" />
+          </Key>
+          <Property Name="GameID" Type="int" Nullable="false" />
+          <Property Name="GreenCard" Type="nvarchar" MaxLength="50" />
+          <Property Name="RedCard" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="UserLogin">
+          <Key>
+            <PropertyRef Name="UserName" />
+          </Key>
+          <Property Name="ProvidedID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="email" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="ApplesToApplesDBModel1StoreContainer">
+          <EntitySet Name="GameInfo" EntityType="Self.GameInfo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="GreenDeckOfCards" EntityType="Self.GreenDeckOfCards" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PlayerInfo" EntityType="Self.PlayerInfo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="RedDeckOfCards" EntityType="Self.RedDeckOfCards" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="RoundInfo" EntityType="Self.RoundInfo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UseDeck" EntityType="Self.UseDeck" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserLogin" EntityType="Self.UserLogin" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ApplesToApplesDBModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="GameInfo">
+          <Key>
+            <PropertyRef Name="GameID" />
+          </Key>
+          <Property Name="GameID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NumberOfPlayers" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="GreenDeckOfCard">
+          <Key>
+            <PropertyRef Name="GreenIndex" />
+          </Key>
+          <Property Name="GreenIndex" Type="Int32" Nullable="false" />
+          <Property Name="adj" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PlayerInfo">
+          <Key>
+            <PropertyRef Name="PlayerNumber" />
+          </Key>
+          <Property Name="PlayerNumber" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AwesomePoints" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Choice" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="RedDeckOfCard">
+          <Key>
+            <PropertyRef Name="RedIndex" />
+          </Key>
+          <Property Name="RedIndex" Type="Int32" Nullable="false" />
+          <Property Name="noun" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="RoundInfo">
+          <Key>
+            <PropertyRef Name="Round" />
+          </Key>
+          <Property Name="Round" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="JudgeNumber" Type="Int32" Nullable="false" />
+          <Property Name="AdjectiveCard" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <EntityType Name="UseDeck">
+          <Key>
+            <PropertyRef Name="GameID" />
+          </Key>
+          <Property Name="GameID" Type="Int32" Nullable="false" />
+          <Property Name="GreenCard" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RedCard" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="UserLogin">
+          <Key>
+            <PropertyRef Name="UserName" />
+          </Key>
+          <Property Name="ProvidedID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="ApplesToApplesDBEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="GameInfoes" EntityType="Self.GameInfo" />
+          <EntitySet Name="GreenDeckOfCards" EntityType="Self.GreenDeckOfCard" />
+          <EntitySet Name="PlayerInfoes" EntityType="Self.PlayerInfo" />
+          <EntitySet Name="RedDeckOfCards" EntityType="Self.RedDeckOfCard" />
+          <EntitySet Name="RoundInfoes" EntityType="Self.RoundInfo" />
+          <EntitySet Name="UseDecks" EntityType="Self.UseDeck" />
+          <EntitySet Name="UserLogins" EntityType="Self.UserLogin" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ApplesToApplesDBModel1StoreContainer" CdmEntityContainer="ApplesToApplesDBEntities1">
+          <EntitySetMapping Name="GameInfoes">
+            <EntityTypeMapping TypeName="ApplesToApplesDBModel1.GameInfo">
+              <MappingFragment StoreEntitySet="GameInfo">
+                <ScalarProperty Name="GameID" ColumnName="GameID" />
+                <ScalarProperty Name="NumberOfPlayers" ColumnName="NumberOfPlayers" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GreenDeckOfCards">
+            <EntityTypeMapping TypeName="ApplesToApplesDBModel1.GreenDeckOfCard">
+              <MappingFragment StoreEntitySet="GreenDeckOfCards">
+                <ScalarProperty Name="GreenIndex" ColumnName="GreenIndex" />
+                <ScalarProperty Name="adj" ColumnName="adj" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PlayerInfoes">
+            <EntityTypeMapping TypeName="ApplesToApplesDBModel1.PlayerInfo">
+              <MappingFragment StoreEntitySet="PlayerInfo">
+                <ScalarProperty Name="PlayerNumber" ColumnName="PlayerNumber" />
+                <ScalarProperty Name="AwesomePoints" ColumnName="AwesomePoints" />
+                <ScalarProperty Name="Choice" ColumnName="Choice" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RedDeckOfCards">
+            <EntityTypeMapping TypeName="ApplesToApplesDBModel1.RedDeckOfCard">
+              <MappingFragment StoreEntitySet="RedDeckOfCards">
+                <ScalarProperty Name="RedIndex" ColumnName="RedIndex" />
+                <ScalarProperty Name="noun" ColumnName="noun" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RoundInfoes">
+            <EntityTypeMapping TypeName="ApplesToApplesDBModel1.RoundInfo">
+              <MappingFragment StoreEntitySet="RoundInfo">
+                <ScalarProperty Name="Round" ColumnName="Round" />
+                <ScalarProperty Name="JudgeNumber" ColumnName="JudgeNumber" />
+                <ScalarProperty Name="AdjectiveCard" ColumnName="AdjectiveCard" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UseDecks">
+            <EntityTypeMapping TypeName="ApplesToApplesDBModel1.UseDeck">
+              <MappingFragment StoreEntitySet="UseDeck">
+                <ScalarProperty Name="GameID" ColumnName="GameID" />
+                <ScalarProperty Name="GreenCard" ColumnName="GreenCard" />
+                <ScalarProperty Name="RedCard" ColumnName="RedCard" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserLogins">
+            <EntityTypeMapping TypeName="ApplesToApplesDBModel1.UserLogin">
+              <MappingFragment StoreEntitySet="UserLogin">
+                <ScalarProperty Name="ProvidedID" ColumnName="ProvidedID" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="email" ColumnName="email" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

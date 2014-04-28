@@ -62,10 +62,45 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="GameContext.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GameContext.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GameContext.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GameContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GameContext.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GameContext.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="GameInfo.cs">
+      <DependentUpon>GameContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GreenDeckOfCard.cs">
+      <DependentUpon>GameContext.tt</DependentUpon>
+    </Compile>
     <Compile Include="GreenDeckOfCards.cs" />
     <Compile Include="Judge.cs" />
+    <Compile Include="PlayerInfo.cs">
+      <DependentUpon>GameContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RedDeckOfCard.cs">
+      <DependentUpon>GameContext.tt</DependentUpon>
+    </Compile>
     <Compile Include="RedDeckOfCards.cs" />
-    <Compile Include="UserLogin.cs" />
+    <Compile Include="RoundInfo.cs">
+      <DependentUpon>GameContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UseDeck.cs">
+      <DependentUpon>GameContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserLogin.cs">
+      <DependentUpon>GameContext.tt</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -113,6 +148,24 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model1.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="ClassDiagram1.cd" />
+    <EntityDeploy Include="GameContext.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>GameContext.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="GameContext.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>GameContext.edmx</DependentUpon>
+      <LastGenOutput>GameContext.Context.cs</LastGenOutput>
+    </None>
+    <None Include="GameContext.edmx.diagram">
+      <DependentUpon>GameContext.edmx</DependentUpon>
+    </None>
+    <None Include="GameContext.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>GameContext.edmx</DependentUpon>
+      <LastGenOutput>GameContext.cs</LastGenOutput>
+    </None>
     <None Include="Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>

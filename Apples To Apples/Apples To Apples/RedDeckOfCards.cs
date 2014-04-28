@@ -7,7 +7,7 @@ namespace Apples_To_Apples
 {
     public partial class RedDeckOfCards
     {
-        public int index { get; set; }
+        public int redIndex { get; set; }
         public string noun { get; set; }
     }
 }
