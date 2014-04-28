@@ -29,50 +29,8 @@ namespace Apples_To_Apples
             allChooseBtns(false);
             //create new game
             newGame = new ApplesToApples();
-            //GameInfo game = new GameInfo();
-            //game.NumberOfPlayers = 0;
-            //incrementNumOfPlayers();
-
-            LblPlayerNum_1.Content = newGame.newPlayer.playerNum;
-           
-            
+            LblPlayerNum_1.Content = newGame.newPlayer.playerNum; 
         }
-
-        /*private void CorrectNumOfPlayers()
-        {
-            if (newGame.numOfPlayers < 2)
-                BtnStart.IsEnabled = false;
-            if (newGame.numOfPlayers > 5)
-                BtnStart.IsEnabled = false;
-        }*/
-
-        /*private void incrementNumOfPlayers()
-        {
-            using (applesContext = new ApplesToApplesDBEntities())
-            {
-
-                IEnumerable<GameInfo> departmentQuery = from d in applesContext.GameInfo
-                     select d;
-
-                foreach (GameInfo row in departmentQuery)
-                {
-                    row.NumberOfPlayers += 1;                   
-                }
-            }
-        }
-
-        private void MainWindow_Closing(object sender, CancelEventArgs e)
-        {
-            using (applesContext = new ApplesToApplesDBEntities())
-            {
-
-                IEnumerable<GameInfo> departmentQuery = from d in applesContext.GameInfo
-                                                        select d;
-
-                foreach (GameInfo row in departmentQuery)
-                    row.NumberOfPlayers -= 1;
-            }
-        }*/
 
         private void ButtonStart_Click(object sender, RoutedEventArgs e)
         {

@@ -55,31 +55,6 @@ namespace Apples_To_Apples
             }
         }
 
-        //private void isNewGame()
-        //{
-        //    // Query for a gameID. 
-        //    var gameNum =
-        //        (from num in applesContext.GameInfo
-        //         where num.GameID < 0
-        //         select num.GameID);
-
-        //    // Change the name of the contact.
-        //    gameNum.ContactName = "New Contact";
-
-        //    // Create and add a new Order to the Orders collection.
-        //    Order ord = new Order { OrderDate = DateTime.Now };
-        //    gameNum.Orders.Add(ord);
-
-        //    // Delete an existing Order.
-        //    Order ord0 = gameNum.Orders[0];
-
-        //    // Removing it from the table also removes it from the Customer’s list.
-        //    db.Orders.DeleteOnSubmit(ord0);
-
-        //    // Ask the DataContext to save all the changes.
-        //    db.SubmitChanges();
-        //}
-
         public void selectJudge()
         {
             Random rand = new Random();
