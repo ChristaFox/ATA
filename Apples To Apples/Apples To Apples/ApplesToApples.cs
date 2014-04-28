@@ -83,8 +83,7 @@ namespace Apples_To_Apples
         public void selectJudge()
         {
             Random rand = new Random();
-            int judge = rand.Next(1, numOfPlayers+1); //this is the player number who will be judge this round.
-                                         //this number needs to be passed to website to all instances of running game.
+            int judge = rand.Next(1, 3); 
             if (newPlayer.playerNum == judge)
                 newPlayer.isJudge = true;
         }
@@ -202,7 +201,7 @@ namespace Apples_To_Apples
         public void YourPick(int place, Canvas view)
         {
             String pick = hand[place];
-            DrawCard(300, 50, pick, Brushes.Red, view);
+            DrawCard(366, 75, pick, Brushes.Red, view);
         }
     }
 }

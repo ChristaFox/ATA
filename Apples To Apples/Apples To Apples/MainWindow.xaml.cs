@@ -191,6 +191,7 @@ namespace Apples_To_Apples
         private void BtnContinue_Click(object sender, RoutedEventArgs e)
         {
             ChoicesPg.Visibility = System.Windows.Visibility.Collapsed;
+            YourPickPg.Visibility = System.Windows.Visibility.Collapsed;
             newGame.StartGame(PlayerView);
 
             if (IsJudge())
@@ -215,6 +216,7 @@ namespace Apples_To_Apples
             BtnSeeChoice.Visibility = System.Windows.Visibility.Hidden;
             newGame.DrawRectangle(150, 200, 275, 40, Brushes.Black, PlayerView);
             newGame.DrawRectangle(150, 200, 475, 40, Brushes.Black, PlayerView);
+            newGame.DrawRectangle(150, 200, 270, 100, Brushes.Black, JudgeView);
             Button NewBtnSeeJudgeCard = new Button();
             NewBtnSeeJudgeCard.Content = "View Judge's Card";
             NewBtnSeeJudgeCard.Height = 39;
