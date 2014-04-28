@@ -199,8 +199,10 @@ namespace Apples_To_Apples
             passedIn.RemoveAt(p);
         }
 
-        public void endGameForAll(Canvas resultspg)
+        public void YourPick(int place, Canvas view)
         {
+            String pick = hand[place];
+            DrawCard(300, 50, pick, Brushes.Red, view);
         }
     }
 }

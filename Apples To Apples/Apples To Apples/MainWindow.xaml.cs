@@ -98,7 +98,6 @@ namespace Apples_To_Apples
         {
             JudgeView.Visibility = System.Windows.Visibility.Collapsed;
             ResultsPage.Visibility = System.Windows.Visibility.Visible;
-            newGame.endGameForAll(ResultsPage);
         }
 
         private void BtnDropOut_Click(object sender, RoutedEventArgs e)
@@ -227,18 +226,23 @@ namespace Apples_To_Apples
 
         private void BtnChooseC1_ClickJ(object sender, RoutedEventArgs e)
         {
+            newGame.YourPick(0, YourPickPg);
         }
         private void BtnChooseC2_ClickJ(object sender, RoutedEventArgs e)
         {
+            newGame.YourPick(1, YourPickPg);
         }
         private void BtnChooseC3_ClickJ(object sender, RoutedEventArgs e)
         {
+            newGame.YourPick(2, YourPickPg);
         }
         private void BtnChooseC4_ClickJ(object sender, RoutedEventArgs e)
         {
+            newGame.YourPick(3, YourPickPg);
         }
         private void BtnChooseC5_ClickJ(object sender, RoutedEventArgs e)
         {
+            newGame.YourPick(4, YourPickPg);
         }
     }
 }
