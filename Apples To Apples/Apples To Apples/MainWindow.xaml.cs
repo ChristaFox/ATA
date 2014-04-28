@@ -20,6 +20,7 @@ namespace Apples_To_Apples
     {
         ApplesToApples newGame; 
         ApplesToApplesDBEntities applesContext;
+        int hi;
 
         public MainWindow()
         {
@@ -28,6 +29,7 @@ namespace Apples_To_Apples
             newGame = new ApplesToApples();
             incrementNumOfPlayers();
             LblPlayerNum_1.Content = newGame.newPlayer.playerNum;
+            TxtBoxAwesomePts.Text = hi.ToString();
             CorrectNumOfPlayers();
         }
 
@@ -50,6 +52,8 @@ namespace Apples_To_Apples
                 foreach (GameInfo row in departmentQuery)
                 {
                     row.NumberOfPlayers += 1;
+                    hi = row.NumberOfPlayers;
+                   
                 }
             }
         }
@@ -85,7 +89,7 @@ namespace Apples_To_Apples
             {
                 PlayerView.Visibility = System.Windows.Visibility.Visible;
                 LblPlyrNum_2.Content = newGame.newPlayer.playerNum;
-                TxtBoxAwesomePts.Text = newGame.newPlayer.awesomePts.ToString();
+                //TxtBoxAwesomePts.Text = newGame.newPlayer.awesomePts.ToString();
             }
         }
 
