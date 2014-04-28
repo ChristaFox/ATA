@@ -20,7 +20,6 @@ namespace Apples_To_Apples
     {
         ApplesToApples newGame; 
         ApplesToApplesDBEntities applesContext;
-        int hi;
 
         public MainWindow()
         {
@@ -28,12 +27,12 @@ namespace Apples_To_Apples
             allChooseBtns(false);
             //create new game
             newGame = new ApplesToApples();
-            GameInfo game = new GameInfo();
-            game.NumberOfPlayers = 0;
-            incrementNumOfPlayers();
+            //GameInfo game = new GameInfo();
+            //game.NumberOfPlayers = 0;
+            //incrementNumOfPlayers();
             LblPlayerNum_1.Content = newGame.newPlayer.playerNum;
-            TxtBoxAwesomePts.Text = hi.ToString();
-            CorrectNumOfPlayers();
+            //TxtBoxAwesomePts.Text = hi.ToString();
+            //CorrectNumOfPlayers();
             
         }
 
@@ -55,9 +54,7 @@ namespace Apples_To_Apples
 
                 foreach (GameInfo row in departmentQuery)
                 {
-                    row.NumberOfPlayers += 1;
-                    hi = row.NumberOfPlayers;
-                   
+                    row.NumberOfPlayers += 1;                   
                 }
             }
         }
@@ -166,7 +163,10 @@ namespace Apples_To_Apples
             LblYourCard.Visibility = System.Windows.Visibility.Visible;
             BtnSeeChoice.Visibility = System.Windows.Visibility.Visible;
             if (newGame.judgesChoice == newGame.playersChoice)
+            {
                 LblWonOrLost.Content = newGame.STATUS_YOU_WON;
+                newGame.newPlayer.awesomePts += 1;
+            }
             else
                 LblWonOrLost.Content = newGame.STATUS_YOU_LOST;
         }
@@ -197,12 +197,23 @@ namespace Apples_To_Apples
                 LblPlyrNum_2.Content = newGame.newPlayer.playerNum;
                 TxtBoxAwesomePts.Text = newGame.newPlayer.awesomePts.ToString();
             }
+            NewRound();
         }
 
         private void NewRound()
         {
+            newGame = new ApplesToApples();
             LblYourCard.Visibility = System.Windows.Visibility.Hidden;
-            newGame.adjBlock.Height = 0;
+            BtnSeeChoice.Visibility = System.Windows.Visibility.Hidden;
+            newGame.DrawRectangle(150, 200, 275, 40, Brushes.Black, PlayerView);
+            Button NewBtnSeeJudgeCard = new Button();
+            NewBtnSeeJudgeCard.Content = "View Judge's Card";
+            NewBtnSeeJudgeCard.Height = 39;
+            NewBtnSeeJudgeCard.Width = 121;
+            NewBtnSeeJudgeCard.Click += SeeJudgeCard_Click;
+            PlayerView.Children.Add(NewBtnSeeJudgeCard);
+            Canvas.SetLeft(NewBtnSeeJudgeCard, 290);
+            Canvas.SetTop(NewBtnSeeJudgeCard, 153);
         }
     }
 }

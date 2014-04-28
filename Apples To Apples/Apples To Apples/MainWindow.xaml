@@ -62,7 +62,7 @@
             <Button Name="BtnChooseC5" Content="Choose" Canvas.Left="753" Canvas.Top="520" Click="BtnChooseC5_Click"/>
             <Label Name="LblYourCard" Content="Your Choice" Foreground="White" Canvas.Left="512" Canvas.Top="237"
                    Visibility="Hidden"/>
-            <Label Name="LblJudgeCard" Content="Judge's Card" Foreground="White" Canvas.Left="310" Canvas.Top="237"/>
+            <Label Name="LblJudgeCard" Content="Judge's Card" Foreground="White" Canvas.Left="310" Canvas.Top="237" />
             <Button Name="SeeJudgeCard" Content="View Judge's Card" Canvas.Left="290" Canvas.Top="153" Height="39" 
                     Width="121" Click="SeeJudgeCard_Click"/>
             <Button Name="BtnSeeChoice" Content="See Judge's Choice" Canvas.Left="653" Canvas.Top="169" Height="55" 

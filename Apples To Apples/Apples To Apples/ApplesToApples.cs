@@ -23,7 +23,6 @@ namespace Apples_To_Apples
         public Boolean judgeHasDrawn = false;
         public Boolean allPlayersHaveChosen = false;
         public Boolean judgeHasChosen = false;
-        public Rectangle adjBlock;
 
         ApplesToApplesDBEntities applesContext;
 
@@ -131,7 +130,7 @@ namespace Apples_To_Apples
         public void DrawCard(int left, int top, string message,
             SolidColorBrush color, Canvas canvas)
         {
-            adjBlock = DrawRectangle(150, 200, left, top, Brushes.White, canvas);
+            DrawRectangle(150, 200, left, top, Brushes.White, canvas);
             DrawRectangle(130, 180, left + 10, top + 10, color, canvas);
 
             TextBlock cardLbl = new TextBlock();
@@ -202,7 +201,6 @@ namespace Apples_To_Apples
 
         public void endGameForAll(Canvas resultspg)
         {
-
         }
     }
 }
