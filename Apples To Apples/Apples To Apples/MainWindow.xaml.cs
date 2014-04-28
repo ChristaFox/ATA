@@ -18,6 +18,7 @@ namespace Apples_To_Apples
     public partial class MainWindow : Window
     {
         ApplesToApples newGame; 
+        ApplesToApplesDBEntities applesContext;
 
         public MainWindow()
         {
@@ -37,6 +38,16 @@ namespace Apples_To_Apples
             if (newGame.numOfPlayers > 5)
                 BtnStart.IsEnabled = false;
         }*/
+
+        private void incrementNumOfPlayers()
+        {
+            using (applesContext = new ApplesToApplesDBEntities())
+            {
+
+                /*IEnumerable<String> departmentQuery = from d in applesContext.GameInfo
+                     select d.NumberOfPlayers;*/
+            }
+        }
 
         private void ButtonStart_Click(object sender, RoutedEventArgs e)
         {
