@@ -139,6 +139,11 @@ namespace Apples_To_Apples
             Canvas.SetTop(rect, top);
         }
 
+        public void playerChooseCard(int placeInArray, Canvas canvas)
+        {
+            DrawCard(370, 100, hand[placeInArray], Brushes.Red, canvas);
+        }
+
         public void endGameForAll(Canvas resultspg)
         {
 

@@ -75,7 +75,7 @@ namespace Apples_To_Apples
         {
             BtnDrawCard.IsEnabled = false;
             newGame.DealAdjCard(JudgeView);
-            newGame.judgeHasDrawn = true; // remember, we need to invoke this in all instances of game 
+            newGame.judgeHasDrawn = true; // PASS THIS INTO TABLE 
             TxtBoxStatusBar_J.Text = newGame.STATUS_WAITING_FOR_PLAYERS_TO_CHOOSE;
         }
 
@@ -87,6 +87,7 @@ namespace Apples_To_Apples
         //choose button click methods
         private void BtnChooseC1_Click(object sender, RoutedEventArgs e)
         {
+            newGame.playerChooseCard(0, PlayerView);
             allChooseBtns(false);
         }
         private void BtnChooseC2_Click(object sender, RoutedEventArgs e)
