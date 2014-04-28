@@ -25,7 +25,7 @@ namespace Apples_To_Apples
             InitializeComponent();
             //create new game
             newGame = new ApplesToApples();
-
+            incrementNumOfPlayers();
             LblPlayerNum_1.Content = newGame.newPlayer.playerNum;
             //CorrectNumOfPlayers(); decided not to do this; will make sure num of players is correct thru website?
         }
@@ -44,8 +44,11 @@ namespace Apples_To_Apples
             using (applesContext = new ApplesToApplesDBEntities())
             {
 
-                IEnumerable<int> departmentQuery = from d in applesContext.GameInfo
-                     select d.NumberOfPlayers;
+                IEnumerable<GameInfo> departmentQuery = from d in applesContext.GameInfo
+                     select d;
+
+                foreach (GameInfo row in departmentQuery)
+                    row.NumberOfPlayers += 1;
             }
         }
 
