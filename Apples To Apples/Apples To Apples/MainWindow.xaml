@@ -64,6 +64,7 @@
             <Button Name="BtnChooseC5" Content="Choose" Canvas.Left="753" Canvas.Top="520" Click="BtnChooseC5_Click"/>
             <Label Name="LblYourCard" Content="Your Choice" Foreground="White" Canvas.Left="512" Canvas.Top="237"
                    Visibility="Hidden"/>
+            <Label Name="LblJudgeCard" Content="Judge's Card" Foreground="White" Canvas.Left="310" Canvas.Top="237"/>
 
         </Canvas>
         <Canvas Name="JudgeView" Visibility="Collapsed">
