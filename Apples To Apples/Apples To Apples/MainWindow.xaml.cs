@@ -103,8 +103,8 @@ namespace Apples_To_Apples
 
         private void BtnDropOut_Click(object sender, RoutedEventArgs e)
         {
-            PlayerView.Visibility = System.Windows.Visibility.Collapsed;
-            DropOutPage.Visibility = System.Windows.Visibility.Visible;
+            ChoicesPg.Visibility = System.Windows.Visibility.Collapsed;
+            ResultsPage.Visibility = System.Windows.Visibility.Visible;
         }
 
         private void BtnDrawCard_Click(object sender, RoutedEventArgs e)

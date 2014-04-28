@@ -98,18 +98,15 @@
                    HorizontalContentAlignment="Center" FontSize="40"/>
             <Label Name="LblResults" Content="Results" Canvas.Top="61" Height="73" Width="367" 
                    FontSize="40" Foreground="White" HorizontalContentAlignment="Center"/>
-            <Label Name="LblPlayerResult" Content="Player                                                           Awesome Points"
-                   Foreground="Yellow" Canvas.Left="86" Canvas.Top="150" Width="749" FontSize="25"/>
-            <Label Name="LblCongrats" Content="Contratulations, Player      ! You won!" Foreground="LightBlue" 
-                   Canvas.Top="509" Width="892" FontSize="20" HorizontalContentAlignment="Center"/>
-            <TextBox Name="TxtBoxPlyrNum_1" Text="0" Canvas.Left="177" Canvas.Top="160" Height="28" Width="24" 
+            <Label Name="LblPlayerResult" Content="Player      , you got             Awesome Points"
+                   Foreground="Yellow" Canvas.Left="92" Canvas.Top="214" Width="749" FontSize="25"/>
+            <Label Name="LblCongrats" Content="Congratulations!" Foreground="LightBlue" 
+                   Canvas.Top="388" Width="892" FontSize="20" HorizontalContentAlignment="Center" Canvas.Left="-10"/>
+            <TextBox Name="TxtBoxPlyrNum_1" Text="0" Canvas.Left="174" Canvas.Top="227" Height="28" Width="24" 
                      FontSize="15" HorizontalContentAlignment="Center"/>
-            <TextBox Name="TxtBoxAwePts" Text="0" HorizontalContentAlignment="Center" Canvas.Left="523" 
-                     Canvas.Top="160" Height="28" Width="25" FontSize="15"/>
-            <TextBox Name="TxtBoxPlyrNum_2" Text="0" HorizontalContentAlignment="Center" Canvas.Left="492" 
-                     Canvas.Top="520" Width="22"/>
-        </Canvas>
-        <Canvas Name="DropOutPage" Visibility="Collapsed">
+            <TextBox Name="TxtBoxAwePts" Text="0" HorizontalContentAlignment="Center" Canvas.Left="354" 
+                     Canvas.Top="227" Height="28" Width="25" FontSize="15"/>
+
             
         </Canvas>
         <Canvas Name="ChoicesPg" Background="Black" Visibility="Collapsed">
@@ -120,7 +117,7 @@
             <Label Name="LblWonOrLost" Content="Sorry, your card was not chosen." Foreground="White" Canvas.Left="570"
                    Canvas.Top="137"/>
             <Button Name="BtnDropOut" Content="Drop Out" Width="99" Canvas.Left="756" Canvas.Top="169" Height="36" 
-                    FontSize="15" />
+                    FontSize="15" Click="BtnDropOut_Click"/>
             <Button Name="BtnContinue" Content="Next Round" RenderTransformOrigin="3.425,6.213" Canvas.Left="756"
                     Canvas.Top="221" Height="36" Width="99" FontSize="14" Click="BtnContinue_Click"/>
         </Canvas>
