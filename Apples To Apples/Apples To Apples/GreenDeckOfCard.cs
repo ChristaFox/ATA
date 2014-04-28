@@ -12,7 +12,7 @@ namespace Apples_To_Apples
     using System;
     using System.Collections.Generic;
     
-    public partial class GreenDeckOfCard
+    public partial class GreenDeckOfCards
     {
         public int index { get; set; }
         public string adj { get; set; }
