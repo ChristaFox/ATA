@@ -26,6 +26,7 @@ namespace Apples_To_Apples
                                                      // the instance of the game where the player is the judge.
                                                      // Therefore, 'true' needs to be passed to website and to
                                                      // the judge's instance of running game.
+        public Boolean judgeHasChosen = false;
 
         ApplesToApplesDBEntities applesContext;
 
@@ -66,9 +67,6 @@ namespace Apples_To_Apples
                                          //this number needs to be passed to website to all instances of running game.
             if (newPlayer.playerNum == judge)
                 newPlayer.isJudge = true;
-            else
-                newPlayer.playerNum = judge;
-
         }
 
         public void DealCards(Canvas view)
@@ -137,6 +135,16 @@ namespace Apples_To_Apples
             canvas.Children.Add(rect);
             Canvas.SetLeft(rect, left);
             Canvas.SetTop(rect, top);
+        }
+
+        public void playerChooseCard(int placeInArray, Canvas canvas)
+        {
+            DrawCard(475, 40, hand[placeInArray], Brushes.Red, canvas);
+        }
+
+        public void GivePlayersAdjCard(Canvas canvas)
+        {
+            DrawCard(275, 40, "Test", Brushes.GreenYellow, canvas);
         }
 
         public void endGameForAll(Canvas resultspg)

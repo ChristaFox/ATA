@@ -50,11 +50,13 @@ namespace Apples_To_Apples
             {
                 JudgeView.Visibility = System.Windows.Visibility.Visible;
                 LblPlyrNum_2_J.Content = newGame.newPlayer.playerNum;
+                TxtBoxAwesomePts_J.Text = newGame.newPlayer.awesomePts.ToString();
             }
             else
             {
                 PlayerView.Visibility = System.Windows.Visibility.Visible;
                 LblPlyrNum_2.Content = newGame.newPlayer.playerNum;
+                TxtBoxAwesomePts.Text = newGame.newPlayer.awesomePts.ToString();
             }
         }
 
@@ -75,7 +77,7 @@ namespace Apples_To_Apples
         {
             BtnDrawCard.IsEnabled = false;
             newGame.DealAdjCard(JudgeView);
-            newGame.judgeHasDrawn = true; // remember, we need to invoke this in all instances of game 
+            newGame.judgeHasDrawn = true; // PASS THIS INTO TABLE 
             TxtBoxStatusBar_J.Text = newGame.STATUS_WAITING_FOR_PLAYERS_TO_CHOOSE;
         }
 
@@ -87,23 +89,41 @@ namespace Apples_To_Apples
         //choose button click methods
         private void BtnChooseC1_Click(object sender, RoutedEventArgs e)
         {
-
+            ChooseCard(0);
         }
         private void BtnChooseC2_Click(object sender, RoutedEventArgs e)
         {
-
+            ChooseCard(1);
         }
         private void BtnChooseC3_Click(object sender, RoutedEventArgs e)
         {
-
+            ChooseCard(2);
         }
         private void BtnChooseC4_Click(object sender, RoutedEventArgs e)
         {
-
+            ChooseCard(3);
         }
         private void BtnChooseC5_Click(object sender, RoutedEventArgs e)
         {
+            ChooseCard(4);
+        }
 
+        private void ChooseCard(int spot)
+        {
+            newGame.playerChooseCard(spot, PlayerView);
+            newGame.GivePlayersAdjCard(PlayerView);
+            allChooseBtns(false);
+            TxtBoxStatusBar.Text = newGame.STATUS_WAITING_FOR_JUDGE_TO_CHOOSE;
+            LblYourCard.Visibility = System.Windows.Visibility.Visible;
+        }
+
+        private void allChooseBtns(Boolean b)
+        {
+            BtnChooseC1.IsEnabled = b;
+            BtnChooseC2.IsEnabled = b;
+            BtnChooseC3.IsEnabled = b;
+            BtnChooseC4.IsEnabled = b;
+            BtnChooseC5.IsEnabled = b;
         }
     }
 }

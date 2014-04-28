@@ -9,7 +9,7 @@ namespace Apples_To_Apples
     class Player
     {
         public int playerNum; //we will need to figure out how to retrieve this num from website
-        public int awesomePts = 0;
+        public int awesomePts = 10;
         public Boolean isJudge = false;
 
         public Player(int number)
