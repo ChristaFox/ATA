@@ -50,11 +50,13 @@ namespace Apples_To_Apples
             {
                 JudgeView.Visibility = System.Windows.Visibility.Visible;
                 LblPlyrNum_2_J.Content = newGame.newPlayer.playerNum;
+                TxtBoxAwesomePts_J.Text = newGame.newPlayer.awesomePts.ToString();
             }
             else
             {
                 PlayerView.Visibility = System.Windows.Visibility.Visible;
                 LblPlyrNum_2.Content = newGame.newPlayer.playerNum;
+                TxtBoxAwesomePts.Text = newGame.newPlayer.awesomePts.ToString();
             }
         }
 
