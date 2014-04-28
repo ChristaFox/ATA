@@ -18,28 +18,35 @@ namespace Apples_To_Apples
 {
     public partial class MainWindow : Window
     {
+        Button NewBtnDrawCard;
         ApplesToApples newGame; 
         ApplesToApplesDBEntities applesContext;
-        int hi;
 
         public MainWindow()
         {
             InitializeComponent();
+
+            allChooseBtns(false);
+            //create new game
+            newGame = new ApplesToApples();
+            //GameInfo game = new GameInfo();
+            //game.NumberOfPlayers = 0;
+            //incrementNumOfPlayers();
+
             LblPlayerNum_1.Content = newGame.newPlayer.playerNum;
-            TxtBoxAwesomePts.Text = hi.ToString();
-            CorrectNumOfPlayers();
+           
             
         }
 
-        private void CorrectNumOfPlayers()
+        /*private void CorrectNumOfPlayers()
         {
             if (newGame.numOfPlayers < 2)
                 BtnStart.IsEnabled = false;
             if (newGame.numOfPlayers > 5)
                 BtnStart.IsEnabled = false;
-        }
+        }*/
 
-        private void incrementNumOfPlayers()
+        /*private void incrementNumOfPlayers()
         {
             using (applesContext = new ApplesToApplesDBEntities())
             {
@@ -49,9 +56,7 @@ namespace Apples_To_Apples
 
                 foreach (GameInfo row in departmentQuery)
                 {
-                    row.NumberOfPlayers += 1;
-                    hi = row.NumberOfPlayers;
-                   
+                    row.NumberOfPlayers += 1;                   
                 }
             }
         }
@@ -67,7 +72,7 @@ namespace Apples_To_Apples
                 foreach (GameInfo row in departmentQuery)
                     row.NumberOfPlayers -= 1;
             }
-        }
+        }*/
 
         private void ButtonStart_Click(object sender, RoutedEventArgs e)
         {
@@ -87,7 +92,7 @@ namespace Apples_To_Apples
             {
                 PlayerView.Visibility = System.Windows.Visibility.Visible;
                 LblPlyrNum_2.Content = newGame.newPlayer.playerNum;
-                //TxtBoxAwesomePts.Text = newGame.newPlayer.awesomePts.ToString();
+                TxtBoxAwesomePts.Text = newGame.newPlayer.awesomePts.ToString();
             }
         }
 
@@ -95,26 +100,49 @@ namespace Apples_To_Apples
         {
             JudgeView.Visibility = System.Windows.Visibility.Collapsed;
             ResultsPage.Visibility = System.Windows.Visibility.Visible;
-            newGame.endGameForAll(ResultsPage);
         }
 
         private void BtnDropOut_Click(object sender, RoutedEventArgs e)
         {
-            PlayerView.Visibility = System.Windows.Visibility.Collapsed;
-            DropOutPage.Visibility = System.Windows.Visibility.Visible;
+            ChoicesPg.Visibility = System.Windows.Visibility.Collapsed;
+            YourPickPg.Visibility = System.Windows.Visibility.Collapsed;
+            ResultsPage.Visibility = System.Windows.Visibility.Visible;
+            TxtBoxPlyrNum_1.Text = newGame.newPlayer.playerNum.ToString();
+            TxtBoxAwePts.Text = newGame.newPlayer.getAwesomePts().ToString();
         }
 
         private void BtnDrawCard_Click(object sender, RoutedEventArgs e)
         {
             BtnDrawCard.IsEnabled = false;
-            newGame.DealAdjCard(JudgeView);
-            newGame.judgeHasDrawn = true; // PASS THIS INTO TABLE 
+            NewBtnDrawCard.IsEnabled = false;
+            newGame.DealAdjCard(JudgeView, 270, 100);
+            newGame.judgeHasDrawn = true; 
             TxtBoxStatusBar_J.Text = newGame.STATUS_WAITING_FOR_PLAYERS_TO_CHOOSE;
+            BtnSeePlyrsCards.Visibility = System.Windows.Visibility.Visible;
         }
 
         public Boolean IsJudge()
         {
             return newGame.newPlayer.isJudge;
+        }
+
+        private void SeeJudgeCard_Click(object sender, RoutedEventArgs e)
+        {
+            newGame.DealAdjCard(PlayerView, 275, 40);
+            allChooseBtns(true);
+            TxtBoxStatusBar.Text = newGame.STATUS_WAITING_FOR_PLAYERS_TO_CHOOSE;
+        }
+
+        private void BtnSeeChoice_Click(object sender, RoutedEventArgs e)
+        {
+            PlayerView.Visibility = System.Windows.Visibility.Collapsed;
+            ChoicesPg.Visibility = System.Windows.Visibility.Visible;
+        }
+
+        private void BtnSeePlyrsCards_Click(object sender, RoutedEventArgs e)
+        {
+            newGame.DealCards(JudgeView);
+            AllChoicesVisible();
         }
 
         //choose button click methods
@@ -141,11 +169,18 @@ namespace Apples_To_Apples
 
         private void ChooseCard(int spot)
         {
-            newGame.playerChooseCard(spot, PlayerView);
-            newGame.GivePlayersAdjCard(PlayerView);
+            newGame.playerChooseCard(spot, PlayerView, ChoicesPg);
             allChooseBtns(false);
             TxtBoxStatusBar.Text = newGame.STATUS_WAITING_FOR_JUDGE_TO_CHOOSE;
             LblYourCard.Visibility = System.Windows.Visibility.Visible;
+            BtnSeeChoice.Visibility = System.Windows.Visibility.Visible;
+            if (newGame.judgesChoice == newGame.playersChoice)
+            {
+                LblWonOrLost.Content = newGame.STATUS_YOU_WON;
+                newGame.newPlayer.awesomePts += 1;
+            }
+            else
+                LblWonOrLost.Content = newGame.STATUS_YOU_LOST;
         }
 
         private void allChooseBtns(Boolean b)
@@ -159,9 +194,111 @@ namespace Apples_To_Apples
 
         private void BtnContinue_Click(object sender, RoutedEventArgs e)
         {
-            PlayerView.Visibility = System.Windows.Visibility.Collapsed;
-            StartPage.Visibility = System.Windows.Visibility.Visible;
-            LblTitle.Visibility = System.Windows.Visibility.Visible;
+            ChoicesPg.Visibility = System.Windows.Visibility.Collapsed;
+            YourPickPg.Visibility = System.Windows.Visibility.Collapsed;
+            newGame.StartGame(PlayerView);
+
+            if (IsJudge())
+            {
+                JudgeView.Visibility = System.Windows.Visibility.Visible;
+                LblPlyrNum_2_J.Content = newGame.newPlayer.playerNum;
+                TxtBoxAwesomePts_J.Text = newGame.newPlayer.awesomePts.ToString();
+                AllChoicesInvisible();
+            }
+            else
+            {
+                PlayerView.Visibility = System.Windows.Visibility.Visible;
+                LblPlyrNum_2.Content = newGame.newPlayer.playerNum;
+                TxtBoxAwesomePts.Text = newGame.newPlayer.awesomePts.ToString();
+            }
+            NewRound();
+        }
+
+        private void NewRound()
+        {
+            newGame.StartGame(PlayerView);
+            BtnSeePlyrsCards.Visibility = System.Windows.Visibility.Hidden;
+            BtnDrawCard.IsEnabled = true;
+            LblYourCard.Visibility = System.Windows.Visibility.Hidden;
+            BtnSeeChoice.Visibility = System.Windows.Visibility.Hidden;
+            newGame.DrawRectangle(150, 200, 275, 40, Brushes.Black, PlayerView);
+            newGame.DrawRectangle(150, 200, 475, 40, Brushes.Black, PlayerView);
+            newGame.DrawRectangle(150, 200, 270, 100, Brushes.Black, JudgeView);
+            int left = 26;
+            for(int i = 0; i < 5; i++)
+            {
+                newGame.DrawRectangle(150, 200, left, 315, Brushes.Black, JudgeView);
+                left += 170;
+            }
+            NewBtnDrawCard = new Button();
+            NewBtnDrawCard.Content = "Draw";
+            NewBtnDrawCard.Height = 200;
+            NewBtnDrawCard.Width = 150;
+            NewBtnDrawCard.FontSize = 21;
+            NewBtnDrawCard.Background = Brushes.GreenYellow;
+            NewBtnDrawCard.Click += BtnDrawCard_Click;
+            JudgeView.Children.Add(NewBtnDrawCard);
+            Canvas.SetLeft(NewBtnDrawCard, 698);
+            Canvas.SetTop(NewBtnDrawCard, 179);
+            Button NewBtnSeeJudgeCard = new Button();
+            NewBtnSeeJudgeCard.Content = "View Judge's Card";
+            NewBtnSeeJudgeCard.Height = 39;
+            NewBtnSeeJudgeCard.Width = 121;
+            NewBtnSeeJudgeCard.Click += SeeJudgeCard_Click;
+            PlayerView.Children.Add(NewBtnSeeJudgeCard);
+            Canvas.SetLeft(NewBtnSeeJudgeCard, 290);
+            Canvas.SetTop(NewBtnSeeJudgeCard, 153);
+
+            AllChoicesInvisible();
+        }
+
+        private void BtnChooseC1_ClickJ(object sender, RoutedEventArgs e)
+        {
+            YouJudgeChoice(0);
+        }
+        private void BtnChooseC2_ClickJ(object sender, RoutedEventArgs e)
+        {
+            YouJudgeChoice(1);
+        }
+        private void BtnChooseC3_ClickJ(object sender, RoutedEventArgs e)
+        {
+            YouJudgeChoice(2);
+        }
+        private void BtnChooseC4_ClickJ(object sender, RoutedEventArgs e)
+        {
+            YouJudgeChoice(3);
+        }
+        private void BtnChooseC5_ClickJ(object sender, RoutedEventArgs e)
+        {
+            YouJudgeChoice(4);
+        }
+
+        public void YouJudgeChoice(int p)
+        {
+            newGame.YourPick(p, YourPickPg);
+            JudgeView.Visibility = System.Windows.Visibility.Hidden;
+            YourPickPg.Visibility = System.Windows.Visibility.Visible;
+            Random r = new Random();
+            int y = r.Next(2, 5);
+            TxtBoxPlayerNum_52.Text = y.ToString();
+        }
+
+        private void AllChoicesInvisible()
+        {
+            BtnChooseC1_J.Visibility = System.Windows.Visibility.Hidden;
+            BtnChooseC2_J.Visibility = System.Windows.Visibility.Hidden;
+            BtnChooseC3_J.Visibility = System.Windows.Visibility.Hidden;
+            BtnChooseC4_J.Visibility = System.Windows.Visibility.Hidden;
+            BtnChooseC5_J.Visibility = System.Windows.Visibility.Hidden;
+        }
+
+        private void AllChoicesVisible()
+        {
+            BtnChooseC1_J.Visibility = System.Windows.Visibility.Visible;
+            BtnChooseC2_J.Visibility = System.Windows.Visibility.Visible;
+            BtnChooseC3_J.Visibility = System.Windows.Visibility.Visible;
+            BtnChooseC4_J.Visibility = System.Windows.Visibility.Visible;
+            BtnChooseC5_J.Visibility = System.Windows.Visibility.Visible;
         }
     }
 }

@@ -2,7 +2,7 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Background="Black"
-        Title="Apples to Apples" Height="600" Width="900" Closing="MainWindow_Closing">
+        Title="Apples to Apples" Height="600" Width="900">
 
     <Window.Resources>
         <Style x:Key="TitleStyle" TargetType="Label" >
@@ -37,17 +37,13 @@
             <Label Name="LblPlayerNum_1" Content="0"
                    HorizontalContentAlignment="Center" Canvas.Bottom="28" FontSize="36" Foreground="White"
                    Canvas.Left="549" Canvas.Top="121"/>
-            <Label Name="LblWaitForPlyrs" Content="You can continue to wait for players or start the game."
+            <Label Name="LblWaitForPlyrs" Content="Be sure to check your status bar for game instructions."
                    HorizontalContentAlignment="Center" Canvas.Bottom="28" FontSize="36" Foreground="White" 
                    Canvas.Left="10" Canvas.Top="313"/>
             <Button Name="BtnStart" Canvas.Left="389" Canvas.Top="270" Width="92" FontSize="20" 
                     Content="Start" Height="38" Click="ButtonStart_Click" />
         </Canvas>
         <Canvas Name="PlayerView" Visibility="Collapsed">
-            <Button Name="BtnDropOut" Content="Drop Out" Width="99" Canvas.Left="756" Canvas.Top="169" Height="36" 
-                    FontSize="15" Visibility="Hidden"/>
-            <Button Name="BtnContinue" Content="Next Round" RenderTransformOrigin="3.425,6.213" Canvas.Left="756"
-                    Canvas.Top="221" Height="36" Width="99" FontSize="14" Click="BtnContinue_Click"/>
             <Label Name="LblStatus" Content="Status Bar" Canvas.Left="681" Canvas.Top="10" Height="45" Width="117" 
                    FontSize="20" Foreground="White"/>
             <TextBox Name="TxtBoxStatusBar" Text="Waiting for judge to draw..." Canvas.Left="652" Canvas.Top="55" Width="159" 
@@ -66,12 +62,14 @@
             <Button Name="BtnChooseC5" Content="Choose" Canvas.Left="753" Canvas.Top="520" Click="BtnChooseC5_Click"/>
             <Label Name="LblYourCard" Content="Your Choice" Foreground="White" Canvas.Left="512" Canvas.Top="237"
                    Visibility="Hidden"/>
-            <Label Name="LblJudgeCard" Content="Judge's Card" Foreground="White" Canvas.Left="310" Canvas.Top="237"/>
-
+            <Label Name="LblJudgeCard" Content="Judge's Card" Foreground="White" Canvas.Left="310" Canvas.Top="237" />
+            <Button Name="SeeJudgeCard" Content="View Judge's Card" Canvas.Left="290" Canvas.Top="153" Height="39" 
+                    Width="121" Click="SeeJudgeCard_Click"/>
+            <Button Name="BtnSeeChoice" Content="See Judge's Choice" Canvas.Left="653" Canvas.Top="169" Height="55" 
+                    Width="160" FontSize="15" Visibility="Hidden" Click="BtnSeeChoice_Click"/>
         </Canvas>
         <Canvas Name="JudgeView" Visibility="Collapsed">
-            <Button Name="BtnEndGame_J" Content="End Game" Width="99" Canvas.Left="783" Canvas.Top="524" Height="36" 
-                    FontSize="15" Click="BtnEnd_Click"/>
+            
             <Label Name="LblStatus_J" Content="Status Bar" Canvas.Left="681" Canvas.Top="10" Height="45" Width="117" 
                    FontSize="20" Foreground="White"/>
             <TextBox Name="TxtBoxStatusBar_J" Text="Waiting for judge to draw..." Canvas.Left="652" Canvas.Top="55" Width="159" 
@@ -87,25 +85,53 @@
                    Canvas.Top="34" FontSize="20"/>
             <Button Name="BtnDrawCard" Content="Draw" Canvas.Left="698" Canvas.Top="179" Height="200" Width="150" 
                     FontSize="21" Click="BtnDrawCard_Click" Background="GreenYellow"/>
+            <Button Name="BtnSeePlyrsCards" Content="See Players' Choices" Canvas.Left="483" Canvas.Top="160" 
+                    Height="47" Width="145" FontSize="13" Visibility="Hidden" Click="BtnSeePlyrsCards_Click"/>
+            <Button Name="BtnChooseC1_J" Content="Choose" Canvas.Left="70" Canvas.Top="520" Click="BtnChooseC1_ClickJ"/>
+            <Button Name="BtnChooseC2_J" Content="Choose" Canvas.Left="241" Canvas.Top="520" Click="BtnChooseC2_ClickJ"/>
+            <Button Name="BtnChooseC3_J" Content="Choose" Canvas.Left="411" Canvas.Top="520" Click="BtnChooseC3_ClickJ"/>
+            <Button Name="BtnChooseC4_J" Content="Choose" Canvas.Left="582" Canvas.Top="520" Click="BtnChooseC4_ClickJ"/>
+            <Button Name="BtnChooseC5_J" Content="Choose" Canvas.Left="753" Canvas.Top="520" Click="BtnChooseC5_ClickJ"/>
         </Canvas>
         <Canvas Name="ResultsPage" Visibility="Collapsed">
             <Label Name="LblGameOver" Content="Game Over" Foreground="Orange" Height="61" Width="892" 
                    HorizontalContentAlignment="Center" FontSize="40"/>
             <Label Name="LblResults" Content="Results" Canvas.Top="61" Height="73" Width="367" 
                    FontSize="40" Foreground="White" HorizontalContentAlignment="Center"/>
-            <Label Name="LblPlayerResult" Content="Player                                                           Awesome Points"
-                   Foreground="Yellow" Canvas.Left="86" Canvas.Top="150" Width="749" FontSize="25"/>
-            <Label Name="LblCongrats" Content="Contratulations, Player      ! You won!" Foreground="LightBlue" 
-                   Canvas.Top="509" Width="892" FontSize="20" HorizontalContentAlignment="Center"/>
-            <TextBox Name="TxtBoxPlyrNum_1" Text="0" Canvas.Left="177" Canvas.Top="160" Height="28" Width="24" 
+            <Label Name="LblPlayerResult" Content="Player      , you got             Awesome Points"
+                   Foreground="Yellow" Canvas.Left="92" Canvas.Top="214" Width="749" FontSize="25"/>
+            <Label Name="LblCongrats" Content="Congratulations!" Foreground="LightBlue" 
+                   Canvas.Top="388" Width="892" FontSize="20" HorizontalContentAlignment="Center" Canvas.Left="-10"/>
+            <TextBox Name="TxtBoxPlyrNum_1" Text="0" Canvas.Left="174" Canvas.Top="227" Height="28" Width="24" 
                      FontSize="15" HorizontalContentAlignment="Center"/>
-            <TextBox Name="TxtBoxAwePts" Text="0" HorizontalContentAlignment="Center" Canvas.Left="523" 
-                     Canvas.Top="160" Height="28" Width="25" FontSize="15"/>
-            <TextBox Name="TxtBoxPlyrNum_2" Text="0" HorizontalContentAlignment="Center" Canvas.Left="492" 
-                     Canvas.Top="520" Width="22"/>
+            <TextBox Name="TxtBoxAwePts" Text="0" HorizontalContentAlignment="Center" Canvas.Left="354" 
+                     Canvas.Top="227" Height="28" Width="25" FontSize="15"/>
         </Canvas>
-        <Canvas Name="DropOutPage" Visibility="Collapsed">
-            
+        <Canvas Name="ChoicesPg" Background="Black" Visibility="Collapsed">
+            <Label Name="LblJudgeChose" Content="Judge Chose: " Foreground="White" Canvas.Left="345" Canvas.Top="22" 
+                   Height="75" Width="187" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30"/>
+            <Label Name="LblOutOf" Content="Out of: " Foreground="White" Canvas.Left="403" Canvas.Top="288" 
+                   Height="40" Width="81" FontSize="20"/>
+            <Label Name="LblWonOrLost" Content="Sorry, your card was not chosen." Foreground="White" Canvas.Left="550"
+                   Canvas.Top="137"/>
+            <Button Name="BtnDropOut" Content="Drop Out" Width="99" Canvas.Left="756" Canvas.Top="169" Height="36" 
+                    FontSize="15" Click="BtnDropOut_Click"/>
+            <Button Name="BtnContinue" Content="Next Round" RenderTransformOrigin="3.425,6.213" Canvas.Left="756"
+                    Canvas.Top="221" Height="36" Width="99" FontSize="14" Click="BtnContinue_Click"/>
+        </Canvas>
+        <Canvas Name="YourPickPg" Background="Black" Visibility="Collapsed">
+            <Label Name="LblYourPick" Content="You picked:" Foreground="Orange" Height="61" Width="892" 
+                   HorizontalContentAlignment="Center" FontSize="40"/>
+            <Label Name="LblFromPlayer" Content="From Player " Foreground="White" Canvas.Left="398" Canvas.Top="313" 
+                   Height="38" Width="106" FontSize="15"/>
+            <TextBox Name="TxtBoxPlayerNum_52" Text="0" RenderTransformOrigin="25.776,10.826" Canvas.Left="509"
+                     Canvas.Top="318" />
+            <Label Name="LblAwarded" Content="They have been awarded an Awesome Point." Foreground="White" 
+                   Canvas.Left="252" Canvas.Top="379" FontSize="20"/>
+            <Button Name="BtnDropOut_1" Content="Drop Out" Width="99" Canvas.Left="756" Canvas.Top="169" Height="36" 
+                    FontSize="15" Click="BtnDropOut_Click"/>
+            <Button Name="BtnContinue_1" Content="Next Round" RenderTransformOrigin="3.425,6.213" Canvas.Left="756"
+                    Canvas.Top="221" Height="36" Width="99" FontSize="14" Click="BtnContinue_Click"/>
         </Canvas>
     </DockPanel>
 

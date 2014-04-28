@@ -14,18 +14,14 @@ namespace Apples_To_Apples
     class ApplesToApples
     {
         public Player newPlayer;
-        public int numOfPlayers = 5; // we will also need to retrieve this from the website
+        public int numOfPlayers = 5;
         public String[] hand = new String[5];
+        public List<String> passedIn = new List<String>();
+        public String judgesChoice;
+        public String playersChoice;
 
-        public Boolean judgeHasDrawn = false; // this bool is only used for instances of the game where
-                                              // the player is not the judge this round - this gets changed
-                                              // once the player that IS the judge draws. Therefore once
-                                              // the judge draws, 'true' is passed to website and to other
-                                              // instances of the running game.
-        public Boolean allPlayersHaveChosen = false; // this bool is just the opposite - it is only used in 
-                                                     // the instance of the game where the player is the judge.
-                                                     // Therefore, 'true' needs to be passed to website and to
-                                                     // the judge's instance of running game.
+        public Boolean judgeHasDrawn = false;
+        public Boolean allPlayersHaveChosen = false;
         public Boolean judgeHasChosen = false;
 
         ApplesToApplesDBEntities applesContext;
@@ -33,18 +29,15 @@ namespace Apples_To_Apples
         public String STATUS_WAITING_FOR_JUDGE_TO_DRAW = "Waiting for judge to draw...";
         public String STATUS_WAITING_FOR_PLAYERS_TO_CHOOSE = "Waiting for players to choose...";
         public String STATUS_WAITING_FOR_JUDGE_TO_CHOOSE = "Waiting for judge to choose...";
-        public String STATUS_YOU_LOST = "Sorry, your card was not chosen by the judge. Better luck next time!";
-        public String STATUS_YOU_WON = "Congratulations! Your card was chosen by the judge. Your awesome points have been awarded.";
+        public String STATUS_YOU_LOST = "Sorry, your card was not chosen.";
+        public String STATUS_YOU_WON = "Congratulations! Your card was chosen. Awesome points awarded.";
         public String STATUS_WAITING_FOR_NEXT_ROUND = "Waiting on players to continue or drop out...";
 
         public ApplesToApples()
         {
-            newPlayer = new Player(2); // pass in assigned player number from website
+            newPlayer = new Player(1);
         }
 
-        /* This method is important - it needs to be implemented every time someone new starts the app.
-         * 
-         */
         public void newPlayerSignedOn()
         {
             numOfPlayers++;
@@ -90,8 +83,7 @@ namespace Apples_To_Apples
         public void selectJudge()
         {
             Random rand = new Random();
-            int judge = rand.Next(1, numOfPlayers+1); //this is the player number who will be judge this round.
-                                         //this number needs to be passed to website to all instances of running game.
+            int judge = rand.Next(1, 3); 
             if (newPlayer.playerNum == judge)
                 newPlayer.isJudge = true;
         }
@@ -121,7 +113,7 @@ namespace Apples_To_Apples
             }  
         }
 
-        public void DealAdjCard(Canvas view)
+        public void DealAdjCard(Canvas view, int left, int top)
         {
             Random rand = new Random();
             Int32 j = rand.Next(0, 44);
@@ -130,7 +122,7 @@ namespace Apples_To_Apples
                 IEnumerable<String> query = from d in applesContext.GreenDeckOfCards
                             where d.GreenIndex == j
                             select d.adj;
-                DrawCard(270, 100, query.ElementAt(0), Brushes.GreenYellow, view);
+                DrawCard(left, top, query.ElementAt(0), Brushes.GreenYellow, view);
             }
         }
 
@@ -153,7 +145,7 @@ namespace Apples_To_Apples
             Canvas.SetTop(cardLbl, top + 30);
         }
 
-        public void DrawRectangle(int width, int height, int left, int top, SolidColorBrush color, Canvas canvas)
+        public Rectangle DrawRectangle(int width, int height, int left, int top, SolidColorBrush color, Canvas canvas)
         {
             Rectangle rect = new Rectangle();
             rect.Width = width;
@@ -162,21 +154,54 @@ namespace Apples_To_Apples
             canvas.Children.Add(rect);
             Canvas.SetLeft(rect, left);
             Canvas.SetTop(rect, top);
+
+            return rect;
         }
 
-        public void playerChooseCard(int placeInArray, Canvas canvas)
+        public void playerChooseCard(int placeInArray, Canvas plyrView, Canvas choicesView)
         {
-            DrawCard(475, 40, hand[placeInArray], Brushes.Red, canvas);
+            playersChoice = hand[placeInArray];
+            DrawCard(475, 40, hand[placeInArray], Brushes.Red, plyrView);
+            Random rand = new Random();
+            Int32 j = rand.Next(0, 87);
+            using (applesContext = new ApplesToApplesDBEntities())
+            {
+                for (int i = 0; i < 5; i++)
+                {
+                    IEnumerable<String> departmentQuery = from d in applesContext.RedDeckOfCards
+                                                          where d.RedIndex == j
+                                                          select d.noun;
+                    passedIn.Add(departmentQuery.ElementAt(0));
+                    j = rand.Next(0, 87);
+                }
+            }
+            passedIn[0] = hand[placeInArray];
+            CompJudgeChoose();
+
+            DrawCard(360, 80, judgesChoice, Brushes.Red, choicesView);
+
+            int lefty = 70;
+            for (int i = 0; i < 4; i++)
+            {
+
+                DrawCard(lefty, 327, hand.ElementAt(i), Brushes.Red, choicesView);
+                lefty += 200;
+            }
+
         }
 
-        public void GivePlayersAdjCard(Canvas canvas)
+        public void CompJudgeChoose()
         {
-            DrawCard(275, 40, "Test", Brushes.GreenYellow, canvas);
+            Random rand = new Random();
+            int p = rand.Next(0, 4);
+            judgesChoice = passedIn[p];
+            passedIn.RemoveAt(p);
         }
 
-        public void endGameForAll(Canvas resultspg)
+        public void YourPick(int place, Canvas view)
         {
-
+            String pick = hand[place];
+            DrawCard(366, 75, pick, Brushes.Red, view);
         }
     }
 }
