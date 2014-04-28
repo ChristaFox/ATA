@@ -77,7 +77,7 @@ namespace Apples_To_Apples
             {
                 for (int i = 0; i < 5; i++)
                 {
-                    IEnumerable<String> departmentQuery = from d in applesContext.RedDeckOfCards
+                    IEnumerable<String> departmentQuery = from d in applesContext.GreenDeckOfCards
                           where d.greenIndex == j
                           select d.adj;
                     hand[i] = departmentQuery.ElementAt(0);
