@@ -44,7 +44,7 @@ namespace Apples_To_Apples
             using (applesContext = new ApplesToApplesDBEntities())
             {
 
-                IEnumerable<int> departmentQuery = from d in applesContext.GameInfoes
+                IEnumerable<int> departmentQuery = from d in applesContext.GameInfo
                      select d.NumberOfPlayers;
             }
         }
