@@ -226,23 +226,30 @@ namespace Apples_To_Apples
 
         private void BtnChooseC1_ClickJ(object sender, RoutedEventArgs e)
         {
-            newGame.YourPick(0, YourPickPg);
+            YouJudgeChoice(0);
         }
         private void BtnChooseC2_ClickJ(object sender, RoutedEventArgs e)
         {
-            newGame.YourPick(1, YourPickPg);
+            YouJudgeChoice(1);
         }
         private void BtnChooseC3_ClickJ(object sender, RoutedEventArgs e)
         {
-            newGame.YourPick(2, YourPickPg);
+            YouJudgeChoice(2);
         }
         private void BtnChooseC4_ClickJ(object sender, RoutedEventArgs e)
         {
-            newGame.YourPick(3, YourPickPg);
+            YouJudgeChoice(3);
         }
         private void BtnChooseC5_ClickJ(object sender, RoutedEventArgs e)
         {
-            newGame.YourPick(4, YourPickPg);
+            YouJudgeChoice(4);
+        }
+
+        public void YouJudgeChoice(int p)
+        {
+            newGame.YourPick(p, YourPickPg);
+            JudgeView.Visibility = System.Windows.Visibility.Hidden;
+            ChoicesPg.Visibility = System.Windows.Visibility.Visible;
         }
     }
 }
