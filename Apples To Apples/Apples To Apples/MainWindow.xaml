@@ -44,8 +44,10 @@
                     Content="Start" Height="38" Click="ButtonStart_Click" />
         </Canvas>
         <Canvas Name="PlayerView" Visibility="Collapsed">
-            <Button Name="BtnDropOut" Content="Drop Out" Width="99" Canvas.Left="783" Canvas.Top="524" Height="36" 
-                    FontSize="15" Click="BtnDropOut_Click" Visibility="Hidden"/>
+            <Button Name="BtnDropOut" Content="Drop Out" Width="99" Canvas.Left="756" Canvas.Top="169" Height="36" 
+                    FontSize="15" />
+            <Button Name="BtnContinue" Content="Next Round" RenderTransformOrigin="3.425,6.213" Canvas.Left="756"
+                    Canvas.Top="221" Height="36" Width="99" FontSize="14" />
             <Label Name="LblStatus" Content="Status Bar" Canvas.Left="681" Canvas.Top="10" Height="45" Width="117" 
                    FontSize="20" Foreground="White"/>
             <TextBox Name="TxtBoxStatusBar" Text="Waiting for judge to draw..." Canvas.Left="652" Canvas.Top="55" Width="159" 
