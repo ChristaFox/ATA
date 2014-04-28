@@ -14,7 +14,7 @@ namespace Apples_To_Apples
     
     public partial class RedDeckOfCard
     {
-        public int ID { get; set; }
+        public int index { get; set; }
         public string noun { get; set; }
     }
 }
