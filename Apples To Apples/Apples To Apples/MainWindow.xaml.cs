@@ -111,6 +111,7 @@ namespace Apples_To_Apples
             newGame.playerChooseCard(spot, PlayerView);
             allChooseBtns(false);
             TxtBoxStatusBar.Text = newGame.STATUS_WAITING_FOR_JUDGE_TO_CHOOSE;
+            LblYourCard.Visibility = System.Windows.Visibility.Visible;
         }
 
         private void allChooseBtns(Boolean b)
