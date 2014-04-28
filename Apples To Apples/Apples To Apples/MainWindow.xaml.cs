@@ -125,5 +125,12 @@ namespace Apples_To_Apples
             BtnChooseC4.IsEnabled = b;
             BtnChooseC5.IsEnabled = b;
         }
+
+        private void BtnContinue_Click(object sender, RoutedEventArgs e)
+        {
+            PlayerView.Visibility = System.Windows.Visibility.Collapsed;
+            StartPage.Visibility = System.Windows.Visibility.Visible;
+            LblTitle.Visibility = System.Windows.Visibility.Visible;
+        }
     }
 }
