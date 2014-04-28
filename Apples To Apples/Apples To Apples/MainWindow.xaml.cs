@@ -212,6 +212,8 @@ namespace Apples_To_Apples
         private void NewRound()
         {
             newGame.StartGame(PlayerView);
+            BtnSeePlyrsCards.Visibility = System.Windows.Visibility.Hidden;
+            BtnDrawCard.IsEnabled = true;
             LblYourCard.Visibility = System.Windows.Visibility.Hidden;
             BtnSeeChoice.Visibility = System.Windows.Visibility.Hidden;
             newGame.DrawRectangle(150, 200, 275, 40, Brushes.Black, PlayerView);
