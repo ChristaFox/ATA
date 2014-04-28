@@ -414,27 +414,35 @@ namespace Apples_To_Apples {
             switch (connectionId)
             {
             case 1:
-            this.LblTitle = ((System.Windows.Controls.Label)(target));
+            
+            #line 5 "..\..\MainWindow.xaml"
+            ((Apples_To_Apples.MainWindow)(target)).Closing += new System.ComponentModel.CancelEventHandler(this.MainWindow_Closing);
+            
+            #line default
+            #line hidden
             return;
             case 2:
-            this.Copyright = ((System.Windows.Controls.Label)(target));
+            this.LblTitle = ((System.Windows.Controls.Label)(target));
             return;
             case 3:
-            this.StartPage = ((System.Windows.Controls.Canvas)(target));
+            this.Copyright = ((System.Windows.Controls.Label)(target));
             return;
             case 4:
-            this.LblDescription = ((System.Windows.Controls.Label)(target));
+            this.StartPage = ((System.Windows.Controls.Canvas)(target));
             return;
             case 5:
-            this.LblStart = ((System.Windows.Controls.Label)(target));
+            this.LblDescription = ((System.Windows.Controls.Label)(target));
             return;
             case 6:
-            this.LblPlayerNum_1 = ((System.Windows.Controls.Label)(target));
+            this.LblStart = ((System.Windows.Controls.Label)(target));
             return;
             case 7:
-            this.LblWaitForPlyrs = ((System.Windows.Controls.Label)(target));
+            this.LblPlayerNum_1 = ((System.Windows.Controls.Label)(target));
             return;
             case 8:
+            this.LblWaitForPlyrs = ((System.Windows.Controls.Label)(target));
+            return;
+            case 9:
             this.BtnStart = ((System.Windows.Controls.Button)(target));
             
             #line 44 "..\..\MainWindow.xaml"
@@ -443,13 +451,13 @@ namespace Apples_To_Apples {
             #line default
             #line hidden
             return;
-            case 9:
+            case 10:
             this.PlayerView = ((System.Windows.Controls.Canvas)(target));
             return;
-            case 10:
+            case 11:
             this.BtnDropOut = ((System.Windows.Controls.Button)(target));
             return;
-            case 11:
+            case 12:
             this.BtnContinue = ((System.Windows.Controls.Button)(target));
             
             #line 50 "..\..\MainWindow.xaml"
@@ -458,25 +466,25 @@ namespace Apples_To_Apples {
             #line default
             #line hidden
             return;
-            case 12:
+            case 13:
             this.LblStatus = ((System.Windows.Controls.Label)(target));
             return;
-            case 13:
+            case 14:
             this.TxtBoxStatusBar = ((System.Windows.Controls.TextBox)(target));
             return;
-            case 14:
+            case 15:
             this.LblPlayer = ((System.Windows.Controls.Label)(target));
             return;
-            case 15:
+            case 16:
             this.LblPlyrNum_2 = ((System.Windows.Controls.Label)(target));
             return;
-            case 16:
+            case 17:
             this.LblAwesomePts = ((System.Windows.Controls.Label)(target));
             return;
-            case 17:
+            case 18:
             this.TxtBoxAwesomePts = ((System.Windows.Controls.TextBox)(target));
             return;
-            case 18:
+            case 19:
             this.BtnChooseC1 = ((System.Windows.Controls.Button)(target));
             
             #line 62 "..\..\MainWindow.xaml"
@@ -485,7 +493,7 @@ namespace Apples_To_Apples {
             #line default
             #line hidden
             return;
-            case 19:
+            case 20:
             this.BtnChooseC2 = ((System.Windows.Controls.Button)(target));
             
             #line 63 "..\..\MainWindow.xaml"
@@ -494,7 +502,7 @@ namespace Apples_To_Apples {
             #line default
             #line hidden
             return;
-            case 20:
+            case 21:
             this.BtnChooseC3 = ((System.Windows.Controls.Button)(target));
             
             #line 64 "..\..\MainWindow.xaml"
@@ -503,7 +511,7 @@ namespace Apples_To_Apples {
             #line default
             #line hidden
             return;
-            case 21:
+            case 22:
             this.BtnChooseC4 = ((System.Windows.Controls.Button)(target));
             
             #line 65 "..\..\MainWindow.xaml"
@@ -512,7 +520,7 @@ namespace Apples_To_Apples {
             #line default
             #line hidden
             return;
-            case 22:
+            case 23:
             this.BtnChooseC5 = ((System.Windows.Controls.Button)(target));
             
             #line 66 "..\..\MainWindow.xaml"
@@ -521,16 +529,16 @@ namespace Apples_To_Apples {
             #line default
             #line hidden
             return;
-            case 23:
+            case 24:
             this.LblYourCard = ((System.Windows.Controls.Label)(target));
             return;
-            case 24:
+            case 25:
             this.LblJudgeCard = ((System.Windows.Controls.Label)(target));
             return;
-            case 25:
+            case 26:
             this.JudgeView = ((System.Windows.Controls.Canvas)(target));
             return;
-            case 26:
+            case 27:
             this.BtnEndGame_J = ((System.Windows.Controls.Button)(target));
             
             #line 74 "..\..\MainWindow.xaml"
@@ -539,28 +547,28 @@ namespace Apples_To_Apples {
             #line default
             #line hidden
             return;
-            case 27:
+            case 28:
             this.LblStatus_J = ((System.Windows.Controls.Label)(target));
             return;
-            case 28:
+            case 29:
             this.TxtBoxStatusBar_J = ((System.Windows.Controls.TextBox)(target));
             return;
-            case 29:
+            case 30:
             this.LblPlayer_J = ((System.Windows.Controls.Label)(target));
             return;
-            case 30:
+            case 31:
             this.LblPlyrNum_2_J = ((System.Windows.Controls.Label)(target));
             return;
-            case 31:
+            case 32:
             this.LblAwesomePts_J = ((System.Windows.Controls.Label)(target));
             return;
-            case 32:
+            case 33:
             this.TxtBoxAwesomePts_J = ((System.Windows.Controls.TextBox)(target));
             return;
-            case 33:
+            case 34:
             this.LblJudge = ((System.Windows.Controls.Label)(target));
             return;
-            case 34:
+            case 35:
             this.BtnDrawCard = ((System.Windows.Controls.Button)(target));
             
             #line 89 "..\..\MainWindow.xaml"
@@ -569,31 +577,31 @@ namespace Apples_To_Apples {
             #line default
             #line hidden
             return;
-            case 35:
+            case 36:
             this.ResultsPage = ((System.Windows.Controls.Canvas)(target));
             return;
-            case 36:
+            case 37:
             this.LblGameOver = ((System.Windows.Controls.Label)(target));
             return;
-            case 37:
+            case 38:
             this.LblResults = ((System.Windows.Controls.Label)(target));
             return;
-            case 38:
+            case 39:
             this.LblPlayerResult = ((System.Windows.Controls.Label)(target));
             return;
-            case 39:
+            case 40:
             this.LblCongrats = ((System.Windows.Controls.Label)(target));
             return;
-            case 40:
+            case 41:
             this.TxtBoxPlyrNum_1 = ((System.Windows.Controls.TextBox)(target));
             return;
-            case 41:
+            case 42:
             this.TxtBoxAwePts = ((System.Windows.Controls.TextBox)(target));
             return;
-            case 42:
+            case 43:
             this.TxtBoxPlyrNum_2 = ((System.Windows.Controls.TextBox)(target));
             return;
-            case 43:
+            case 44:
             this.DropOutPage = ((System.Windows.Controls.Canvas)(target));
             return;
             }
