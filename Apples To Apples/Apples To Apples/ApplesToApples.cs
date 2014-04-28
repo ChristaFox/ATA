@@ -101,7 +101,7 @@ namespace Apples_To_Apples
             using (applesContext = new ApplesToApplesDBEntities())
             {
                 IEnumerable<String> query = from d in applesContext.GreenDeckOfCards
-                            where d.num == j
+                            where d.index == j
                             select d.adj;
                 DrawCard(270, 100, query.ElementAt(0), Brushes.GreenYellow, view);
             }
