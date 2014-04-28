@@ -144,6 +144,11 @@ namespace Apples_To_Apples
             DrawCard(475, 40, hand[placeInArray], Brushes.Red, canvas);
         }
 
+        public void GivePlayersAdjCard(Canvas canvas)
+        {
+            DrawCard(275, 40, "Test", Brushes.GreenYellow, canvas);
+        }
+
         public void endGameForAll(Canvas resultspg)
         {
 
