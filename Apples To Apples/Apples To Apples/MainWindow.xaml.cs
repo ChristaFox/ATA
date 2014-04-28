@@ -27,10 +27,13 @@ namespace Apples_To_Apples
             InitializeComponent();
             //create new game
             newGame = new ApplesToApples();
+            GameInfo game = new GameInfo();
+            game.NumberOfPlayers = 0;
             incrementNumOfPlayers();
             LblPlayerNum_1.Content = newGame.newPlayer.playerNum;
             TxtBoxAwesomePts.Text = hi.ToString();
             CorrectNumOfPlayers();
+            
         }
 
         private void CorrectNumOfPlayers()
