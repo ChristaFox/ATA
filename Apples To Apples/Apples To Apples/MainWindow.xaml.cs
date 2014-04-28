@@ -18,6 +18,7 @@ namespace Apples_To_Apples
 {
     public partial class MainWindow : Window
     {
+        Button NewBtnDrawCard;
         ApplesToApples newGame; 
         ApplesToApplesDBEntities applesContext;
 
@@ -112,6 +113,7 @@ namespace Apples_To_Apples
         private void BtnDrawCard_Click(object sender, RoutedEventArgs e)
         {
             BtnDrawCard.IsEnabled = false;
+            NewBtnDrawCard.IsEnabled = false;
             newGame.DealAdjCard(JudgeView, 270, 100);
             newGame.judgeHasDrawn = true; 
             TxtBoxStatusBar_J.Text = newGame.STATUS_WAITING_FOR_PLAYERS_TO_CHOOSE;
@@ -225,10 +227,12 @@ namespace Apples_To_Apples
                 newGame.DrawRectangle(150, 200, left, 315, Brushes.Black, JudgeView);
                 left += 170;
             }
-            Button NewBtnDrawCard = new Button();
+            NewBtnDrawCard = new Button();
             NewBtnDrawCard.Content = "Draw";
             NewBtnDrawCard.Height = 200;
             NewBtnDrawCard.Width = 150;
+            NewBtnDrawCard.FontSize = 21;
+            NewBtnDrawCard.Background = Brushes.GreenYellow;
             NewBtnDrawCard.Click += BtnDrawCard_Click;
             JudgeView.Children.Add(NewBtnDrawCard);
             Canvas.SetLeft(NewBtnDrawCard, 698);
