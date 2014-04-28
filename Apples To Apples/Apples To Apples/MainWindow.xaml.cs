@@ -141,6 +141,7 @@ namespace Apples_To_Apples
         private void BtnSeePlyrsCards_Click(object sender, RoutedEventArgs e)
         {
             newGame.DealCards(JudgeView);
+            AllChoicesVisible();
         }
 
         //choose button click methods
@@ -201,6 +202,7 @@ namespace Apples_To_Apples
                 JudgeView.Visibility = System.Windows.Visibility.Visible;
                 LblPlyrNum_2_J.Content = newGame.newPlayer.playerNum;
                 TxtBoxAwesomePts_J.Text = newGame.newPlayer.awesomePts.ToString();
+                AllChoicesInvisible();
             }
             else
             {
@@ -245,6 +247,8 @@ namespace Apples_To_Apples
             PlayerView.Children.Add(NewBtnSeeJudgeCard);
             Canvas.SetLeft(NewBtnSeeJudgeCard, 290);
             Canvas.SetTop(NewBtnSeeJudgeCard, 153);
+
+            AllChoicesInvisible();
         }
 
         private void BtnChooseC1_ClickJ(object sender, RoutedEventArgs e)
@@ -276,6 +280,24 @@ namespace Apples_To_Apples
             Random r = new Random();
             int y = r.Next(2, 5);
             TxtBoxPlayerNum_52.Text = y.ToString();
+        }
+
+        private void AllChoicesInvisible()
+        {
+            BtnChooseC1_J.Visibility = System.Windows.Visibility.Hidden;
+            BtnChooseC2_J.Visibility = System.Windows.Visibility.Hidden;
+            BtnChooseC3_J.Visibility = System.Windows.Visibility.Hidden;
+            BtnChooseC4_J.Visibility = System.Windows.Visibility.Hidden;
+            BtnChooseC5_J.Visibility = System.Windows.Visibility.Hidden;
+        }
+
+        private void AllChoicesVisible()
+        {
+            BtnChooseC1_J.Visibility = System.Windows.Visibility.Visible;
+            BtnChooseC2_J.Visibility = System.Windows.Visibility.Visible;
+            BtnChooseC3_J.Visibility = System.Windows.Visibility.Visible;
+            BtnChooseC4_J.Visibility = System.Windows.Visibility.Visible;
+            BtnChooseC5_J.Visibility = System.Windows.Visibility.Visible;
         }
     }
 }
