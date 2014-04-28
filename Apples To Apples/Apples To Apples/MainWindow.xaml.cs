@@ -249,7 +249,10 @@ namespace Apples_To_Apples
         {
             newGame.YourPick(p, YourPickPg);
             JudgeView.Visibility = System.Windows.Visibility.Hidden;
-            ChoicesPg.Visibility = System.Windows.Visibility.Visible;
+            YourPickPg.Visibility = System.Windows.Visibility.Visible;
+            Random r = new Random();
+            int y = r.Next(2, 5);
+            TxtBoxPlayerNum_52.Text = y.ToString();
         }
     }
 }
