@@ -222,5 +222,21 @@ namespace Apples_To_Apples
             Canvas.SetLeft(NewBtnSeeJudgeCard, 290);
             Canvas.SetTop(NewBtnSeeJudgeCard, 153);
         }
+
+        private void BtnChooseC1_ClickJ(object sender, RoutedEventArgs e)
+        {
+        }
+        private void BtnChooseC2_ClickJ(object sender, RoutedEventArgs e)
+        {
+        }
+        private void BtnChooseC3_ClickJ(object sender, RoutedEventArgs e)
+        {
+        }
+        private void BtnChooseC4_ClickJ(object sender, RoutedEventArgs e)
+        {
+        }
+        private void BtnChooseC5_ClickJ(object sender, RoutedEventArgs e)
+        {
+        }
     }
 }

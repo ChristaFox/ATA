@@ -87,6 +87,11 @@
                     FontSize="21" Click="BtnDrawCard_Click" Background="GreenYellow"/>
             <Button Name="BtnSeePlyrsCards" Content="See Players' Choices" Canvas.Left="483" Canvas.Top="160" 
                     Height="47" Width="145" FontSize="13" Visibility="Hidden" Click="BtnSeePlyrsCards_Click"/>
+            <Button Name="BtnChooseC1_J" Content="Choose" Canvas.Left="70" Canvas.Top="520" Click="BtnChooseC1_ClickJ"/>
+            <Button Name="BtnChooseC2_J" Content="Choose" Canvas.Left="241" Canvas.Top="520" Click="BtnChooseC2_ClickJ"/>
+            <Button Name="BtnChooseC3_J" Content="Choose" Canvas.Left="411" Canvas.Top="520" Click="BtnChooseC3_ClickJ"/>
+            <Button Name="BtnChooseC4_J" Content="Choose" Canvas.Left="582" Canvas.Top="520" Click="BtnChooseC4_ClickJ"/>
+            <Button Name="BtnChooseC5_J" Content="Choose" Canvas.Left="753" Canvas.Top="520" Click="BtnChooseC5_ClickJ"/>
         </Canvas>
         <Canvas Name="ResultsPage" Visibility="Collapsed">
             <Label Name="LblGameOver" Content="Game Over" Foreground="Orange" Height="61" Width="892" 

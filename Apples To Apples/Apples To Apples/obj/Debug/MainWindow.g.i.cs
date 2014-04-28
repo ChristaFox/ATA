@@ -312,9 +312,17 @@ namespace Apples_To_Apples {
         #line hidden
         
         
+        #line 90 "..\..\MainWindow.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Button BtnChooseC1_J;
+        
+        #line default
+        #line hidden
+        
+        
         #line 91 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.Canvas ResultsPage;
+        internal System.Windows.Controls.Button BtnChooseC2_J;
         
         #line default
         #line hidden
@@ -322,7 +330,15 @@ namespace Apples_To_Apples {
         
         #line 92 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.Label LblGameOver;
+        internal System.Windows.Controls.Button BtnChooseC3_J;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 93 "..\..\MainWindow.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Button BtnChooseC4_J;
         
         #line default
         #line hidden
@@ -330,7 +346,7 @@ namespace Apples_To_Apples {
         
         #line 94 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.Label LblResults;
+        internal System.Windows.Controls.Button BtnChooseC5_J;
         
         #line default
         #line hidden
@@ -338,13 +354,37 @@ namespace Apples_To_Apples {
         
         #line 96 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Canvas ResultsPage;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 97 "..\..\MainWindow.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Label LblGameOver;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 99 "..\..\MainWindow.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Label LblResults;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 101 "..\..\MainWindow.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Label LblPlayerResult;
         
         #line default
         #line hidden
         
         
-        #line 98 "..\..\MainWindow.xaml"
+        #line 103 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Label LblCongrats;
         
@@ -352,7 +392,7 @@ namespace Apples_To_Apples {
         #line hidden
         
         
-        #line 100 "..\..\MainWindow.xaml"
+        #line 105 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBox TxtBoxPlyrNum_1;
         
@@ -360,7 +400,7 @@ namespace Apples_To_Apples {
         #line hidden
         
         
-        #line 102 "..\..\MainWindow.xaml"
+        #line 107 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBox TxtBoxAwePts;
         
@@ -368,7 +408,7 @@ namespace Apples_To_Apples {
         #line hidden
         
         
-        #line 104 "..\..\MainWindow.xaml"
+        #line 109 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBox TxtBoxPlyrNum_2;
         
@@ -376,7 +416,7 @@ namespace Apples_To_Apples {
         #line hidden
         
         
-        #line 107 "..\..\MainWindow.xaml"
+        #line 112 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Canvas DropOutPage;
         
@@ -384,7 +424,7 @@ namespace Apples_To_Apples {
         #line hidden
         
         
-        #line 110 "..\..\MainWindow.xaml"
+        #line 115 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Canvas ChoicesPg;
         
@@ -392,7 +432,7 @@ namespace Apples_To_Apples {
         #line hidden
         
         
-        #line 111 "..\..\MainWindow.xaml"
+        #line 116 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Label LblJudgeChose;
         
@@ -400,7 +440,7 @@ namespace Apples_To_Apples {
         #line hidden
         
         
-        #line 113 "..\..\MainWindow.xaml"
+        #line 118 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Label LblOutOf;
         
@@ -408,7 +448,7 @@ namespace Apples_To_Apples {
         #line hidden
         
         
-        #line 115 "..\..\MainWindow.xaml"
+        #line 120 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Label LblWonOrLost;
         
@@ -416,7 +456,7 @@ namespace Apples_To_Apples {
         #line hidden
         
         
-        #line 117 "..\..\MainWindow.xaml"
+        #line 122 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button BtnDropOut;
         
@@ -424,7 +464,7 @@ namespace Apples_To_Apples {
         #line hidden
         
         
-        #line 119 "..\..\MainWindow.xaml"
+        #line 124 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button BtnContinue;
         
@@ -624,51 +664,96 @@ namespace Apples_To_Apples {
             #line hidden
             return;
             case 35:
-            this.ResultsPage = ((System.Windows.Controls.Canvas)(target));
+            this.BtnChooseC1_J = ((System.Windows.Controls.Button)(target));
+            
+            #line 90 "..\..\MainWindow.xaml"
+            this.BtnChooseC1_J.Click += new System.Windows.RoutedEventHandler(this.BtnChooseC1_ClickJ);
+            
+            #line default
+            #line hidden
             return;
             case 36:
-            this.LblGameOver = ((System.Windows.Controls.Label)(target));
+            this.BtnChooseC2_J = ((System.Windows.Controls.Button)(target));
+            
+            #line 91 "..\..\MainWindow.xaml"
+            this.BtnChooseC2_J.Click += new System.Windows.RoutedEventHandler(this.BtnChooseC2_ClickJ);
+            
+            #line default
+            #line hidden
             return;
             case 37:
-            this.LblResults = ((System.Windows.Controls.Label)(target));
+            this.BtnChooseC3_J = ((System.Windows.Controls.Button)(target));
+            
+            #line 92 "..\..\MainWindow.xaml"
+            this.BtnChooseC3_J.Click += new System.Windows.RoutedEventHandler(this.BtnChooseC3_ClickJ);
+            
+            #line default
+            #line hidden
             return;
             case 38:
-            this.LblPlayerResult = ((System.Windows.Controls.Label)(target));
+            this.BtnChooseC4_J = ((System.Windows.Controls.Button)(target));
+            
+            #line 93 "..\..\MainWindow.xaml"
+            this.BtnChooseC4_J.Click += new System.Windows.RoutedEventHandler(this.BtnChooseC4_ClickJ);
+            
+            #line default
+            #line hidden
             return;
             case 39:
-            this.LblCongrats = ((System.Windows.Controls.Label)(target));
+            this.BtnChooseC5_J = ((System.Windows.Controls.Button)(target));
+            
+            #line 94 "..\..\MainWindow.xaml"
+            this.BtnChooseC5_J.Click += new System.Windows.RoutedEventHandler(this.BtnChooseC5_ClickJ);
+            
+            #line default
+            #line hidden
             return;
             case 40:
-            this.TxtBoxPlyrNum_1 = ((System.Windows.Controls.TextBox)(target));
+            this.ResultsPage = ((System.Windows.Controls.Canvas)(target));
             return;
             case 41:
-            this.TxtBoxAwePts = ((System.Windows.Controls.TextBox)(target));
+            this.LblGameOver = ((System.Windows.Controls.Label)(target));
             return;
             case 42:
-            this.TxtBoxPlyrNum_2 = ((System.Windows.Controls.TextBox)(target));
+            this.LblResults = ((System.Windows.Controls.Label)(target));
             return;
             case 43:
-            this.DropOutPage = ((System.Windows.Controls.Canvas)(target));
+            this.LblPlayerResult = ((System.Windows.Controls.Label)(target));
             return;
             case 44:
-            this.ChoicesPg = ((System.Windows.Controls.Canvas)(target));
+            this.LblCongrats = ((System.Windows.Controls.Label)(target));
             return;
             case 45:
-            this.LblJudgeChose = ((System.Windows.Controls.Label)(target));
+            this.TxtBoxPlyrNum_1 = ((System.Windows.Controls.TextBox)(target));
             return;
             case 46:
-            this.LblOutOf = ((System.Windows.Controls.Label)(target));
+            this.TxtBoxAwePts = ((System.Windows.Controls.TextBox)(target));
             return;
             case 47:
-            this.LblWonOrLost = ((System.Windows.Controls.Label)(target));
+            this.TxtBoxPlyrNum_2 = ((System.Windows.Controls.TextBox)(target));
             return;
             case 48:
-            this.BtnDropOut = ((System.Windows.Controls.Button)(target));
+            this.DropOutPage = ((System.Windows.Controls.Canvas)(target));
             return;
             case 49:
+            this.ChoicesPg = ((System.Windows.Controls.Canvas)(target));
+            return;
+            case 50:
+            this.LblJudgeChose = ((System.Windows.Controls.Label)(target));
+            return;
+            case 51:
+            this.LblOutOf = ((System.Windows.Controls.Label)(target));
+            return;
+            case 52:
+            this.LblWonOrLost = ((System.Windows.Controls.Label)(target));
+            return;
+            case 53:
+            this.BtnDropOut = ((System.Windows.Controls.Button)(target));
+            return;
+            case 54:
             this.BtnContinue = ((System.Windows.Controls.Button)(target));
             
-            #line 120 "..\..\MainWindow.xaml"
+            #line 125 "..\..\MainWindow.xaml"
             this.BtnContinue.Click += new System.Windows.RoutedEventHandler(this.BtnContinue_Click);
             
             #line default
