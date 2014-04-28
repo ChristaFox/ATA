@@ -25,7 +25,7 @@ namespace Apples_To_Apples
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<GreenDeckOfCard> GreenDeckOfCards { get; set; }
+        public virtual DbSet<GreenDeckOfCards> GreenDeckOfCards { get; set; }
         public virtual DbSet<RedDeckOfCard> RedDeckOfCards { get; set; }
         public virtual DbSet<UserLogin> UserLogins { get; set; }
     }
