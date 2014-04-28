@@ -28,17 +28,16 @@ namespace Apples_To_Apples
             newGame = new ApplesToApples();
             incrementNumOfPlayers();
             LblPlayerNum_1.Content = newGame.newPlayer.playerNum;
-            //CorrectNumOfPlayers(); decided not to do this; will make sure num of players is correct thru website?
+            CorrectNumOfPlayers();
         }
 
-        //we need to figure out how to get this to continuously check until numOfPlayers is in correct range
-        /*private void CorrectNumOfPlayers()
+        private void CorrectNumOfPlayers()
         {
             if (newGame.numOfPlayers < 2)
                 BtnStart.IsEnabled = false;
             if (newGame.numOfPlayers > 5)
                 BtnStart.IsEnabled = false;
-        }*/
+        }
 
         private void incrementNumOfPlayers()
         {
@@ -49,7 +48,9 @@ namespace Apples_To_Apples
                      select d;
 
                 foreach (GameInfo row in departmentQuery)
+                {
                     row.NumberOfPlayers += 1;
+                }
             }
         }
 
