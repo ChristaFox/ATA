@@ -26,7 +26,7 @@ namespace Apples_To_Apples
         }
     
         public virtual DbSet<GreenDeckOfCards> GreenDeckOfCards { get; set; }
-        public virtual DbSet<RedDeckOfCards> RedDeckOfCards { get; set; }
+        public virtual DbSet<RedDeckOfCard> RedDeckOfCards { get; set; }
         public virtual DbSet<UserLogin> UserLogins { get; set; }
     }
 }
