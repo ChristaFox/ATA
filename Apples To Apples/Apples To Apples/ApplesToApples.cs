@@ -47,7 +47,7 @@ namespace Apples_To_Apples
         {
             //isNewGame();
 
-            //selectJudge();
+            selectJudge();
 
             if(!newPlayer.isJudge)
             {

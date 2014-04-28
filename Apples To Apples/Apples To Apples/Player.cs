@@ -10,7 +10,7 @@ namespace Apples_To_Apples
     {
         public int playerNum;
         public int awesomePts = 0;
-        public Boolean isJudge = true;
+        public Boolean isJudge = false;
 
         public Player(int number)
         {
