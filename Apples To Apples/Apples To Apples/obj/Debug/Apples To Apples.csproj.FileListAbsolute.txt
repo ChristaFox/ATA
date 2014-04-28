@@ -73,3 +73,4 @@ C:\Users\Christa\Documents\GitHub\ATA\Apples To Apples\Apples To Apples\obj\Debu
 C:\Users\Christa\Documents\GitHub\ATA\Apples To Apples\Apples To Apples\obj\Debug\Apples To Apples.csproj.GenerateResource.Cache
 C:\Users\Christa\Documents\GitHub\ATA\Apples To Apples\Apples To Apples\obj\Debug\Apples To Apples.exe
 C:\Users\Christa\Documents\GitHub\ATA\Apples To Apples\Apples To Apples\obj\Debug\Apples To Apples.pdb
+C:\Users\Christa\Documents\GitHub\ATA\Apples To Apples\Apples To Apples\obj\Debug\Apples To Apples.csprojResolveAssemblyReference.cache
