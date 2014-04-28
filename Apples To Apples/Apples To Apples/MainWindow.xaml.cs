@@ -87,25 +87,30 @@ namespace Apples_To_Apples
         //choose button click methods
         private void BtnChooseC1_Click(object sender, RoutedEventArgs e)
         {
-            newGame.playerChooseCard(0, PlayerView);
-            allChooseBtns(false);
-            TxtBoxStatusBar.Text = newGame.STATUS_WAITING_FOR_JUDGE_TO_CHOOSE;
+            ChooseCard(0);
         }
         private void BtnChooseC2_Click(object sender, RoutedEventArgs e)
         {
-            allChooseBtns(false);
+            ChooseCard(1);
         }
         private void BtnChooseC3_Click(object sender, RoutedEventArgs e)
         {
-            allChooseBtns(false);
+            ChooseCard(2);
         }
         private void BtnChooseC4_Click(object sender, RoutedEventArgs e)
         {
-            allChooseBtns(false);
+            ChooseCard(3);
         }
         private void BtnChooseC5_Click(object sender, RoutedEventArgs e)
         {
+            ChooseCard(4);
+        }
+
+        private void ChooseCard(int spot)
+        {
+            newGame.playerChooseCard(spot, PlayerView);
             allChooseBtns(false);
+            TxtBoxStatusBar.Text = newGame.STATUS_WAITING_FOR_JUDGE_TO_CHOOSE;
         }
 
         private void allChooseBtns(Boolean b)
