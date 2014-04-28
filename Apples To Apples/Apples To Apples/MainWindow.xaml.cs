@@ -219,6 +219,20 @@ namespace Apples_To_Apples
             newGame.DrawRectangle(150, 200, 275, 40, Brushes.Black, PlayerView);
             newGame.DrawRectangle(150, 200, 475, 40, Brushes.Black, PlayerView);
             newGame.DrawRectangle(150, 200, 270, 100, Brushes.Black, JudgeView);
+            int left = 26;
+            for(int i = 0; i < 5; i++)
+            {
+                newGame.DrawRectangle(150, 200, left, 315, Brushes.Black, JudgeView);
+                left += 170;
+            }
+            Button NewBtnDrawCard = new Button();
+            NewBtnDrawCard.Content = "Draw";
+            NewBtnDrawCard.Height = 200;
+            NewBtnDrawCard.Width = 150;
+            NewBtnDrawCard.Click += BtnDrawCard_Click;
+            JudgeView.Children.Add(NewBtnDrawCard);
+            Canvas.SetLeft(NewBtnDrawCard, 698);
+            Canvas.SetTop(NewBtnDrawCard, 179);
             Button NewBtnSeeJudgeCard = new Button();
             NewBtnSeeJudgeCard.Content = "View Judge's Card";
             NewBtnSeeJudgeCard.Height = 39;
