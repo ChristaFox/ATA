@@ -105,13 +105,15 @@ namespace Apples_To_Apples
         {
             ChoicesPg.Visibility = System.Windows.Visibility.Collapsed;
             ResultsPage.Visibility = System.Windows.Visibility.Visible;
+            TxtBoxPlyrNum_1.Text = newGame.newPlayer.playerNum.ToString();
+            TxtBoxAwePts.Text = newGame.newPlayer.getAwesomePts().ToString();
         }
 
         private void BtnDrawCard_Click(object sender, RoutedEventArgs e)
         {
             BtnDrawCard.IsEnabled = false;
             newGame.DealAdjCard(JudgeView, 270, 100);
-            newGame.judgeHasDrawn = true; // PASS THIS INTO TABLE 
+            newGame.judgeHasDrawn = true; 
             TxtBoxStatusBar_J.Text = newGame.STATUS_WAITING_FOR_PLAYERS_TO_CHOOSE;
             BtnSeePlyrsCards.Visibility = System.Windows.Visibility.Visible;
         }
