@@ -106,8 +106,6 @@
                      FontSize="15" HorizontalContentAlignment="Center"/>
             <TextBox Name="TxtBoxAwePts" Text="0" HorizontalContentAlignment="Center" Canvas.Left="354" 
                      Canvas.Top="227" Height="28" Width="25" FontSize="15"/>
-
-            
         </Canvas>
         <Canvas Name="ChoicesPg" Background="Black" Visibility="Collapsed">
             <Label Name="LblJudgeChose" Content="Judge Chose: " Foreground="White" Canvas.Left="345" Canvas.Top="22" 
@@ -119,6 +117,20 @@
             <Button Name="BtnDropOut" Content="Drop Out" Width="99" Canvas.Left="756" Canvas.Top="169" Height="36" 
                     FontSize="15" Click="BtnDropOut_Click"/>
             <Button Name="BtnContinue" Content="Next Round" RenderTransformOrigin="3.425,6.213" Canvas.Left="756"
+                    Canvas.Top="221" Height="36" Width="99" FontSize="14" Click="BtnContinue_Click"/>
+        </Canvas>
+        <Canvas Name="YourPickPg" Background="Black" Visibility="Collapsed">
+            <Label Name="LblYourPick" Content="You picked:" Foreground="Orange" Height="61" Width="892" 
+                   HorizontalContentAlignment="Center" FontSize="40"/>
+            <Label Name="LblFromPlayer" Content="From Player " Foreground="White" Canvas.Left="398" Canvas.Top="313" 
+                   Height="38" Width="106" FontSize="15"/>
+            <TextBox Name="TxtBoxPlayerNum_52" Text="0" RenderTransformOrigin="25.776,10.826" Canvas.Left="509"
+                     Canvas.Top="318" />
+            <Label Name="LblAwarded" Content="They have been awarded an Awesome Point." Foreground="White" 
+                   Canvas.Left="252" Canvas.Top="379" FontSize="20"/>
+            <Button Name="BtnDropOut_1" Content="Drop Out" Width="99" Canvas.Left="756" Canvas.Top="169" Height="36" 
+                    FontSize="15" Click="BtnDropOut_Click"/>
+            <Button Name="BtnContinue_1" Content="Next Round" RenderTransformOrigin="3.425,6.213" Canvas.Left="756"
                     Canvas.Top="221" Height="36" Width="99" FontSize="14" Click="BtnContinue_Click"/>
         </Canvas>
     </DockPanel>
