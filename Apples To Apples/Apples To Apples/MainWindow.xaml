@@ -37,17 +37,13 @@
             <Label Name="LblPlayerNum_1" Content="0"
                    HorizontalContentAlignment="Center" Canvas.Bottom="28" FontSize="36" Foreground="White"
                    Canvas.Left="549" Canvas.Top="121"/>
-            <Label Name="LblWaitForPlyrs" Content="You can continue to wait for players or start the game."
+            <Label Name="LblWaitForPlyrs" Content="Be sure to check your status bar for game instructions."
                    HorizontalContentAlignment="Center" Canvas.Bottom="28" FontSize="36" Foreground="White" 
                    Canvas.Left="10" Canvas.Top="313"/>
             <Button Name="BtnStart" Canvas.Left="389" Canvas.Top="270" Width="92" FontSize="20" 
                     Content="Start" Height="38" Click="ButtonStart_Click" />
         </Canvas>
         <Canvas Name="PlayerView" Visibility="Collapsed">
-            <Button Name="BtnDropOut" Content="Drop Out" Width="99" Canvas.Left="756" Canvas.Top="169" Height="36" 
-                    FontSize="15" Visibility="Hidden"/>
-            <Button Name="BtnContinue" Content="Next Round" RenderTransformOrigin="3.425,6.213" Canvas.Left="756"
-                    Canvas.Top="221" Height="36" Width="99" FontSize="14" Click="BtnContinue_Click"/>
             <Label Name="LblStatus" Content="Status Bar" Canvas.Left="681" Canvas.Top="10" Height="45" Width="117" 
                    FontSize="20" Foreground="White"/>
             <TextBox Name="TxtBoxStatusBar" Text="Waiting for judge to draw..." Canvas.Left="652" Canvas.Top="55" Width="159" 
@@ -67,7 +63,10 @@
             <Label Name="LblYourCard" Content="Your Choice" Foreground="White" Canvas.Left="512" Canvas.Top="237"
                    Visibility="Hidden"/>
             <Label Name="LblJudgeCard" Content="Judge's Card" Foreground="White" Canvas.Left="310" Canvas.Top="237"/>
-
+            <Button Name="SeeJudgeCard" Content="View Judge's Card" Canvas.Left="290" Canvas.Top="153" Height="39" 
+                    Width="121" Click="SeeJudgeCard_Click"/>
+            <Button Name="BtnSeeChoice" Content="See Judge's Choice" Canvas.Left="653" Canvas.Top="169" Height="55" 
+                    Width="160" FontSize="15" Visibility="Hidden" Click="BtnSeeChoice_Click"/>
         </Canvas>
         <Canvas Name="JudgeView" Visibility="Collapsed">
             <Button Name="BtnEndGame_J" Content="End Game" Width="99" Canvas.Left="783" Canvas.Top="524" Height="36" 
@@ -106,6 +105,18 @@
         </Canvas>
         <Canvas Name="DropOutPage" Visibility="Collapsed">
             
+        </Canvas>
+        <Canvas Name="ChoicesPg" Background="Black" Visibility="Collapsed">
+            <Label Name="LblJudgeChose" Content="Judge Chose: " Foreground="White" Canvas.Left="345" Canvas.Top="22" 
+                   Height="75" Width="187" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30"/>
+            <Label Name="LblOutOf" Content="Out of: " Foreground="White" Canvas.Left="403" Canvas.Top="288" 
+                   Height="40" Width="81" FontSize="20"/>
+            <Label Name="LblWonOrLost" Content="Sorry, your card was not chosen." Foreground="White" Canvas.Left="570"
+                   Canvas.Top="137"/>
+            <Button Name="BtnDropOut" Content="Drop Out" Width="99" Canvas.Left="756" Canvas.Top="169" Height="36" 
+                    FontSize="15" />
+            <Button Name="BtnContinue" Content="Next Round" RenderTransformOrigin="3.425,6.213" Canvas.Left="756"
+                    Canvas.Top="221" Height="36" Width="99" FontSize="14" Click="BtnContinue_Click"/>
         </Canvas>
     </DockPanel>
 
