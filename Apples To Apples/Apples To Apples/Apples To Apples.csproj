@@ -65,6 +65,7 @@
     <Compile Include="GreenDeckOfCard.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="GreenDeckOfCards.cs" />
     <Compile Include="Judge.cs" />
     <Compile Include="Model1.cs">
       <AutoGen>True</AutoGen>

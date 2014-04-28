@@ -40,16 +40,16 @@
       <Schema Namespace="ApplesToApplesDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="GreenDeckOfCard">
           <Key>
-            <PropertyRef Name="num" />
+            <PropertyRef Name="index" />
           </Key>
-          <Property Name="num" Type="Int32" Nullable="false" />
+          <Property Name="index" Type="Int32" Nullable="false" />
           <Property Name="adj" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
         </EntityType>
         <EntityType Name="RedDeckOfCard">
           <Key>
-            <PropertyRef Name="ID" />
+            <PropertyRef Name="index" />
           </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="index" Type="Int32" Nullable="false" />
           <Property Name="noun" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
         </EntityType>
         <EntityType Name="UserLogin">
@@ -75,7 +75,7 @@
           <EntitySetMapping Name="GreenDeckOfCards">
             <EntityTypeMapping TypeName="ApplesToApplesDBModel.GreenDeckOfCard">
               <MappingFragment StoreEntitySet="GreenDeckOfCards">
-                <ScalarProperty Name="num" ColumnName="num" />
+                <ScalarProperty Name="index" ColumnName="num" />
                 <ScalarProperty Name="adj" ColumnName="adj" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -83,7 +83,7 @@
           <EntitySetMapping Name="RedDeckOfCards">
             <EntityTypeMapping TypeName="ApplesToApplesDBModel.RedDeckOfCard">
               <MappingFragment StoreEntitySet="RedDeckOfCards">
-                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="index" ColumnName="ID" />
                 <ScalarProperty Name="noun" ColumnName="noun" />
               </MappingFragment>
             </EntityTypeMapping>
