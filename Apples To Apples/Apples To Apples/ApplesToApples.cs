@@ -77,9 +77,9 @@ namespace Apples_To_Apples
             {
                 for (int i = 0; i < 5; i++)
                 {
-                    IEnumerable<String> departmentQuery = from d in applesContext.GreenDeckOfCards
-                          where d.GreenIndex == j
-                          select d.adj;
+                    IEnumerable<String> departmentQuery = from d in applesContext.RedDeckOfCards
+                          where d.RedIndex == j
+                          select d.noun;
                     hand[i] = departmentQuery.ElementAt(0);
                     j = rand.Next(0, 87);
                 }
