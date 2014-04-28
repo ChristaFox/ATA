@@ -141,7 +141,7 @@ namespace Apples_To_Apples
 
         public void playerChooseCard(int placeInArray, Canvas canvas)
         {
-            DrawCard(370, 100, hand[placeInArray], Brushes.Red, canvas);
+            DrawCard(475, 40, hand[placeInArray], Brushes.Red, canvas);
         }
 
         public void endGameForAll(Canvas resultspg)

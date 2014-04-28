@@ -89,6 +89,7 @@ namespace Apples_To_Apples
         {
             newGame.playerChooseCard(0, PlayerView);
             allChooseBtns(false);
+            TxtBoxStatusBar.Text = newGame.STATUS_WAITING_FOR_JUDGE_TO_CHOOSE;
         }
         private void BtnChooseC2_Click(object sender, RoutedEventArgs e)
         {
