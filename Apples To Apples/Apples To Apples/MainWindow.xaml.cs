@@ -103,6 +103,7 @@ namespace Apples_To_Apples
         private void BtnDropOut_Click(object sender, RoutedEventArgs e)
         {
             ChoicesPg.Visibility = System.Windows.Visibility.Collapsed;
+            YourPickPg.Visibility = System.Windows.Visibility.Collapsed;
             ResultsPage.Visibility = System.Windows.Visibility.Visible;
             TxtBoxPlyrNum_1.Text = newGame.newPlayer.playerNum.ToString();
             TxtBoxAwePts.Text = newGame.newPlayer.getAwesomePts().ToString();
