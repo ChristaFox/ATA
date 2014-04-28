@@ -45,7 +45,7 @@
         </Canvas>
         <Canvas Name="PlayerView" Visibility="Collapsed">
             <Button Name="BtnDropOut" Content="Drop Out" Width="99" Canvas.Left="756" Canvas.Top="169" Height="36" 
-                    FontSize="15" />
+                    FontSize="15" Visibility="Hidden"/>
             <Button Name="BtnContinue" Content="Next Round" RenderTransformOrigin="3.425,6.213" Canvas.Left="756"
                     Canvas.Top="221" Height="36" Width="99" FontSize="14" />
             <Label Name="LblStatus" Content="Status Bar" Canvas.Left="681" Canvas.Top="10" Height="45" Width="117" 
