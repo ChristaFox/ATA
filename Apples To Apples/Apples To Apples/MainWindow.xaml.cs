@@ -29,7 +29,7 @@ namespace Apples_To_Apples
             allChooseBtns(false);
             //create new game
             newGame = new ApplesToApples();
-            LblPlayerNum_1.Content = newGame.newPlayer.playerNum; 
+            LblPlayerNum_1.Content = newGame.newPlayer.getPlayerNum(); 
         }
 
         private void ButtonStart_Click(object sender, RoutedEventArgs e)
@@ -43,14 +43,14 @@ namespace Apples_To_Apples
             if (IsJudge())
             {
                 JudgeView.Visibility = System.Windows.Visibility.Visible;
-                LblPlyrNum_2_J.Content = newGame.newPlayer.playerNum;
-                TxtBoxAwesomePts_J.Text = newGame.newPlayer.awesomePts.ToString();
+                LblPlyrNum_2_J.Content = newGame.newPlayer.getPlayerNum();
+                TxtBoxAwesomePts_J.Text = newGame.newPlayer.getAwesomePts().ToString();
             }
             else
             {
                 PlayerView.Visibility = System.Windows.Visibility.Visible;
-                LblPlyrNum_2.Content = newGame.newPlayer.playerNum;
-                TxtBoxAwesomePts.Text = newGame.newPlayer.awesomePts.ToString();
+                LblPlyrNum_2.Content = newGame.newPlayer.getPlayerNum();
+                TxtBoxAwesomePts.Text = newGame.newPlayer.getAwesomePts().ToString();
             }
         }
 
@@ -65,7 +65,7 @@ namespace Apples_To_Apples
             ChoicesPg.Visibility = System.Windows.Visibility.Collapsed;
             YourPickPg.Visibility = System.Windows.Visibility.Collapsed;
             ResultsPage.Visibility = System.Windows.Visibility.Visible;
-            TxtBoxPlyrNum_1.Text = newGame.newPlayer.playerNum.ToString();
+            TxtBoxPlyrNum_1.Text = newGame.newPlayer.getPlayerNum().ToString();
             TxtBoxAwePts.Text = newGame.newPlayer.getAwesomePts().ToString();
         }
 
@@ -74,14 +74,13 @@ namespace Apples_To_Apples
             BtnDrawCard.IsEnabled = false;
             NewBtnDrawCard.IsEnabled = false;
             newGame.DealAdjCard(JudgeView, 270, 100);
-            newGame.judgeHasDrawn = true; 
             TxtBoxStatusBar_J.Text = newGame.STATUS_WAITING_FOR_PLAYERS_TO_CHOOSE;
             BtnSeePlyrsCards.Visibility = System.Windows.Visibility.Visible;
         }
 
         public Boolean IsJudge()
         {
-            return newGame.newPlayer.isJudge;
+            return newGame.newPlayer.getIsJudge();
         }
 
         private void SeeJudgeCard_Click(object sender, RoutedEventArgs e)
@@ -135,7 +134,7 @@ namespace Apples_To_Apples
             if (newGame.judgesChoice == newGame.playersChoice)
             {
                 LblWonOrLost.Content = newGame.STATUS_YOU_WON;
-                newGame.newPlayer.awesomePts += 1;
+                newGame.newPlayer.incAwesomePts();
             }
             else
                 LblWonOrLost.Content = newGame.STATUS_YOU_LOST;
@@ -159,15 +158,15 @@ namespace Apples_To_Apples
             if (IsJudge())
             {
                 JudgeView.Visibility = System.Windows.Visibility.Visible;
-                LblPlyrNum_2_J.Content = newGame.newPlayer.playerNum;
-                TxtBoxAwesomePts_J.Text = newGame.newPlayer.awesomePts.ToString();
+                LblPlyrNum_2_J.Content = newGame.newPlayer.getPlayerNum();
+                TxtBoxAwesomePts_J.Text = newGame.newPlayer.getAwesomePts().ToString();
                 AllChoicesInvisible();
             }
             else
             {
                 PlayerView.Visibility = System.Windows.Visibility.Visible;
-                LblPlyrNum_2.Content = newGame.newPlayer.playerNum;
-                TxtBoxAwesomePts.Text = newGame.newPlayer.awesomePts.ToString();
+                LblPlyrNum_2.Content = newGame.newPlayer.getPlayerNum();
+                TxtBoxAwesomePts.Text = newGame.newPlayer.getAwesomePts().ToString();
             }
             NewRound();
         }

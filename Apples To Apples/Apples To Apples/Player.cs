@@ -27,6 +27,11 @@ namespace Apples_To_Apples
             return awesomePts;
         }
 
+        public void incAwesomePts()
+        {
+            awesomePts++;
+        }
+
         public Boolean getIsJudge()
         {
             return isJudge;
