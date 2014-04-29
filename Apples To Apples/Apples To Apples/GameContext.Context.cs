@@ -13,9 +13,9 @@ namespace Apples_To_Apples
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class ApplesToApplesDBEntities : DbContext
+    public partial class ApplesToApplesDBEntities1 : DbContext
     {
-        public ApplesToApplesDBEntities()
+        public ApplesToApplesDBEntities1()
             : base("name=ApplesToApplesDBEntities1")
         {
         }
@@ -25,12 +25,9 @@ namespace Apples_To_Apples
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<GameInfo> GameInfo { get; set; }
+        public virtual DbSet<GameInfo> GameInfoes { get; set; }
+        public virtual DbSet<UserLogin> UserLogins { get; set; }
         public virtual DbSet<GreenDeckOfCard> GreenDeckOfCards { get; set; }
-        public virtual DbSet<PlayerInfo> PlayerInfo { get; set; }
         public virtual DbSet<RedDeckOfCard> RedDeckOfCards { get; set; }
-        public virtual DbSet<RoundInfo> RoundInfo { get; set; }
-        public virtual DbSet<UseDeck> UseDeck { get; set; }
-        public virtual DbSet<UserLogin> UserLogin { get; set; }
     }
 }

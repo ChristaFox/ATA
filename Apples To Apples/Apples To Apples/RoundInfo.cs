@@ -12,7 +12,7 @@ namespace Apples_To_Apples
     using System;
     using System.Collections.Generic;
     
-    public partial class RoundInfo
+    public partial class RoundInfo : GameInfo
     {
         public int Round { get; set; }
         public int JudgeNumber { get; set; }

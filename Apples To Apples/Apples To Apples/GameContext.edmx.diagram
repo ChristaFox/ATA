@@ -12,6 +12,9 @@
         <EntityTypeShape EntityType="ApplesToApplesDBModel1.RoundInfo" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="ApplesToApplesDBModel1.UseDeck" Width="1.5" PointX="4.75" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="ApplesToApplesDBModel1.UserLogin" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <InheritanceConnector EntityType="ApplesToApplesDBModel1.RoundInfo" />
+        <InheritanceConnector EntityType="ApplesToApplesDBModel1.PlayerInfo" />
+        <InheritanceConnector EntityType="ApplesToApplesDBModel1.UseDeck" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

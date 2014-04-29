@@ -12,7 +12,7 @@ namespace Apples_To_Apples
     using System;
     using System.Collections.Generic;
     
-    public partial class PlayerInfo
+    public partial class PlayerInfo : GameInfo
     {
         public int PlayerNumber { get; set; }
         public string AwesomePoints { get; set; }
