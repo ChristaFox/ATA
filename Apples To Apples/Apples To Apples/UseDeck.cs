@@ -12,9 +12,8 @@ namespace Apples_To_Apples
     using System;
     using System.Collections.Generic;
     
-    public partial class UseDeck
+    public partial class UseDeck : GameInfo
     {
-        public int GameID { get; set; }
         public string GreenCard { get; set; }
         public string RedCard { get; set; }
     }
