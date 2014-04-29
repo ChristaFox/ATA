@@ -111,7 +111,7 @@
                    Height="75" Width="187" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30"/>
             <Label Name="LblOutOf" Content="Out of: " Foreground="White" Canvas.Left="403" Canvas.Top="288" 
                    Height="40" Width="81" FontSize="20"/>
-            <Label Name="LblWonOrLost" Content="Sorry, your card was not chosen." Foreground="White" Canvas.Left="550"
+            <Label Name="LblWonOrLost" Content="Sorry, your card was not chosen." Foreground="White" Canvas.Left="520"
                    Canvas.Top="137"/>
             <Button Name="BtnDropOut" Content="Drop Out" Width="99" Canvas.Left="756" Canvas.Top="169" Height="36" 
                     FontSize="15" Click="BtnDropOut_Click"/>

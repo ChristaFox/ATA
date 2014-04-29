@@ -20,16 +20,15 @@ namespace Apples_To_Apples
     {
         Button NewBtnDrawCard;
         ApplesToApples newGame; 
-        ApplesToApplesDBEntities applesContext;
 
         public MainWindow()
         {
             InitializeComponent();
-
-            allChooseBtns(false);
             //create new game
             newGame = new ApplesToApples();
-            LblPlayerNum_1.Content = newGame.newPlayer.getPlayerNum(); 
+            LblPlayerNum_1.Content = newGame.newPlayer.getPlayerNum();
+            allChooseBtns(false);
+            AllChoicesInvisible();
         }
 
         private void ButtonStart_Click(object sender, RoutedEventArgs e)
