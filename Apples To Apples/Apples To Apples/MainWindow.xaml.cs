@@ -18,7 +18,7 @@ namespace Apples_To_Apples
 {
     public partial class MainWindow : Window
     {
-        Button NewBtnDrawCard;
+        Button NewBtnDrawCard = new Button();
         ApplesToApples newGame; 
 
         public MainWindow()
@@ -99,6 +99,7 @@ namespace Apples_To_Apples
         {
             newGame.DealCards(JudgeView);
             AllChoicesVisible();
+            TxtBoxStatusBar_J.Text = newGame.STATUS_WAITING_FOR_JUDGE_TO_CHOOSE;
         }
 
         //choose button click methods
@@ -205,6 +206,8 @@ namespace Apples_To_Apples
             Canvas.SetLeft(NewBtnSeeJudgeCard, 290);
             Canvas.SetTop(NewBtnSeeJudgeCard, 153);
 
+            TxtBoxStatusBar_J.Text = newGame.STATUS_WAITING_FOR_JUDGE_TO_DRAW;
+            TxtBoxStatusBar.Text = newGame.STATUS_WAITING_FOR_JUDGE_TO_DRAW;
             AllChoicesInvisible();
         }
 
