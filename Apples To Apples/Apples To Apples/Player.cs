@@ -8,13 +8,18 @@ namespace Apples_To_Apples
 {
     class Player
     {
-        public int playerNum;
-        public int awesomePts = 0;
-        public Boolean isJudge = false;
+        private int playerNum;
+        private int awesomePts = 0;
+        private Boolean isJudge = false;
 
         public Player(int number)
         {
             playerNum = number;
+        }
+
+        public int getPlayerNum()
+        {
+            return playerNum;
         }
 
         public int getAwesomePts()
@@ -22,9 +27,14 @@ namespace Apples_To_Apples
             return awesomePts;
         }
 
-        public void setAwesomePts(int newPts)
+        public Boolean getIsJudge()
         {
-            awesomePts = newPts;
+            return isJudge;
+        }
+
+        public void setIsJudge(Boolean jud)
+        {
+            isJudge = jud;
         }
     }
 }

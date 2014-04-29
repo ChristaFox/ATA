@@ -36,11 +36,11 @@ namespace Apples_To_Apples
 
         public void StartGame(Canvas view)
         {
-            newPlayer.isJudge = false;
+            newPlayer.setIsJudge(false);
 
             selectJudge();
 
-            if(!newPlayer.isJudge)
+            if(!newPlayer.getIsJudge())
             {
                 DealCards(view);
             }
@@ -49,9 +49,9 @@ namespace Apples_To_Apples
         public void selectJudge()
         {
             Random rand = new Random();
-            int judge = rand.Next(1, 3); 
-            if (newPlayer.playerNum == judge)
-                newPlayer.isJudge = true;
+            int judge = rand.Next(1, 3);
+            if (newPlayer.getPlayerNum() == judge)
+                newPlayer.setIsJudge(true);
         }
 
         public void DealCards(Canvas view)
