@@ -20,10 +20,6 @@ namespace Apples_To_Apples
         public String judgesChoice;
         public String playersChoice;
 
-        public Boolean judgeHasDrawn = false;
-        public Boolean allPlayersHaveChosen = false;
-        public Boolean judgeHasChosen = false;
-
         ApplesToApplesDBEntities applesContext;
 
         public String STATUS_WAITING_FOR_JUDGE_TO_DRAW = "Waiting for judge to draw...";
@@ -38,14 +34,9 @@ namespace Apples_To_Apples
             newPlayer = new Player(1);
         }
 
-        public void newPlayerSignedOn()
-        {
-            numOfPlayers++;
-        }
-
         public void StartGame(Canvas view)
         {
-            //isNewGame();
+            newPlayer.isJudge = false;
 
             selectJudge();
 

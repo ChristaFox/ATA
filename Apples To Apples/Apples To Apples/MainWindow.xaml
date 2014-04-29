@@ -69,7 +69,6 @@
                     Width="160" FontSize="15" Visibility="Hidden" Click="BtnSeeChoice_Click"/>
         </Canvas>
         <Canvas Name="JudgeView" Visibility="Collapsed">
-            
             <Label Name="LblStatus_J" Content="Status Bar" Canvas.Left="681" Canvas.Top="10" Height="45" Width="117" 
                    FontSize="20" Foreground="White"/>
             <TextBox Name="TxtBoxStatusBar_J" Text="Waiting for judge to draw..." Canvas.Left="652" Canvas.Top="55" Width="159" 
@@ -134,5 +133,4 @@
                     Canvas.Top="221" Height="36" Width="99" FontSize="14" Click="BtnContinue_Click"/>
         </Canvas>
     </DockPanel>
-
 </Window>
